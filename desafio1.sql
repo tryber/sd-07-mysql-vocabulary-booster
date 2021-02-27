@@ -2,4 +2,3 @@ SELECT country.COUNTRY_NAME AS Pa√≠s, if(region.REGION_NAME = 'Europe' , 'inclu√
 INNER JOIN hr.regions AS region
 ON country.REGION_ID = region.REGION_ID
 ORDER BY country.COUNTRY_NAME;
-
