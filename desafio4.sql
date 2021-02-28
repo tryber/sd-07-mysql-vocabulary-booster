@@ -1,0 +1,18 @@
+SELECT
+J.JOB_TITLE AS Cargo,
+ROUND(t2.Media, 2) AS 'Média salarial',
+CASE
+WHEN ROUND(t2.Media, 2) BETWEEN 2000 AND 5800 THEN 'Júnior'
+WHEN ROUND(t2.Media, 2) BETWEEN 5801 AND 7500 THEN 'Pleno'
+WHEN ROUND(t2.Media, 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
+WHEN ROUND(t2.Media, 2) > 10500 THEN 'CEO'
+ELSE 'Usuário sem acesso'
+END AS Senioridade
+FROM hr.employees AS E
+INNER JOIN (SELECT JOB_ID, AVG(SALARY) AS Media FROM hr.employees
+ GROUP BY JOB_ID) AS t2
+ ON E.JOB_ID = t2.JOB_ID
+ INNER JOIN hr.jobs AS J
+ ON E.JOB_ID = J.JOB_ID
+ ORDER BY ROUND(t2.Media, 2), Cargo;
+ 
