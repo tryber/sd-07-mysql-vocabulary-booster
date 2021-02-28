@@ -3,7 +3,7 @@ SELECT jb.job_title AS "Cargo", ROUND(AVG(em.salary),2) AS "Média salarial", (C
       WHEN ROUND(AVG(em.salary),2) >= 7501 AND ROUND(AVG(em.salary),2) <= 10500 THEN 'Sênior'
       WHEN ROUND(AVG(em.salary),2) >= 5801 AND ROUND(AVG(em.salary),2) <= 7500 THEN 'Pleno'
     ELSE 'Júnior'
-   END) AS "Senioridade" 
+    END) AS "Senioridade" 
 FROM jobs AS jb
 JOIN employees AS em
 ON em.job_id =  jb.job_id
