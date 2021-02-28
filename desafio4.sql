@@ -13,4 +13,3 @@ GROUP BY Cargo
 ORDER BY 
 'Média Salarial',
 Cargo;
-
