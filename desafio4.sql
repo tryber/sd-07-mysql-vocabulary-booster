@@ -1,15 +1,12 @@
 SELECT
-	j.job_title AS 'Cargo',
-    ROUND(AVG(e.salary), 2) AS 'Média salarial',
-    (CASE
-		WHEN (AVG(e.salary) >= 2000 and AVG(e.salary) <= 5800) THEN 'Júnior'
-        WHEN (AVG(e.salary) >= 5800 and AVG(e.salary) <= 7500) THEN 'Pleno'
-        WHEN (AVG(e.salary) >= 7500 and AVG(e.salary) <= 10500) THEN 'Sênior'
-        ELSE 'CEO'
-        
-	END) AS 'Senioridade'
-    
-
+  j.job_title AS 'Cargo',
+  ROUND(AVG(e.salary), 2) AS 'Média salarial',
+  (CASE
+    WHEN (AVG(e.salary) >= 2000 and AVG(e.salary) <= 5800) THEN 'Júnior'
+    WHEN (AVG(e.salary) >= 5800 and AVG(e.salary) <= 7500) THEN 'Pleno'
+    WHEN (AVG(e.salary) >= 7500 and AVG(e.salary) <= 10500) THEN 'Sênior'
+    ELSE 'CEO'
+  END) AS 'Senioridade'
 FROM hr.employees AS e
 JOIN hr.jobs AS j
 ON e.job_id = j.job_id
