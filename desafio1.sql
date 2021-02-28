@@ -7,4 +7,5 @@ WHEN REGION_ID = 4 THEN 'não incluído'
 ELSE  
 REGION_ID = 'não incluído'
 END AS  'Status Inclusão'
-FROM hr.countries;
+FROM hr.countries
+ORDER BY COUNTRY_NAME;
