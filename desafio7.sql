@@ -1,6 +1,6 @@
 SELECT 
-UCASE(CONCAT(EMP.FIRST_NAME, ' ', EMP.LAST_NAME)) "Nome Completo",
-HIST.START_DATE "Data de início do cargo",
+UCASE(CONCAT(EMP.FIRST_NAME, ' ', EMP.LAST_NAME)) "Nome completo",
+HIST.START_DATE "Data de início",
 EMP.SALARY Salário
 FROM hr.job_history HIST
 INNER JOIN hr.employees EMP

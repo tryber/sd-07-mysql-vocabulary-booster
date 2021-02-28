@@ -1,5 +1,5 @@
 SELECT 
-CONCAT(EMP.FIRST_NAME, ' ', EMP.LAST_NAME) "Nome Completo",
+CONCAT(EMP.FIRST_NAME, ' ', EMP.LAST_NAME) "Nome completo",
 JOB.JOB_TITLE Cargo,
 HIST.START_DATE "Data de início do cargo",
 DEP.DEPARTMENT_NAME Departamento
