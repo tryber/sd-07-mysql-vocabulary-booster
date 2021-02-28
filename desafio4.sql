@@ -1,5 +1,5 @@
 SELECT
-J.JOB_TITLE AS Cargo,
+DISTINCT(J.JOB_TITLE) AS Cargo,
 ROUND(t2.Media, 2) AS 'Média salarial',
 CASE
 WHEN ROUND(t2.Media, 2) BETWEEN 2000 AND 5800 THEN 'Júnior'
