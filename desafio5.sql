@@ -5,4 +5,4 @@ FROM hr.employees AS e
 JOIN hr.jobs AS j
 ON e.job_id = j.job_id
 GROUP BY cargo
-ORDER BY `Variação Salarial`, cargo
+ORDER BY `Variação Salarial`, cargo;

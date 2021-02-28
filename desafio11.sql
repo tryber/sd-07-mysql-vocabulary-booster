@@ -9,4 +9,3 @@ SELECT
 FROM w3schools.customers AS c1
 HAVING `Número de compatriotas` > 0
 ORDER BY c1.contactname;
-    
