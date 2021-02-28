@@ -1,6 +1,6 @@
 USE w3schools;
 SELECT
-	CUSTOMERS.ContactName AS 'Nome de contato',
+CUSTOMERS.ContactName AS 'Nome de contato',
     SHIPPERS.ShipperName AS 'Empresa que fez o envio',
     ORDERS.OrderDate AS 'Data do pedido'
 FROM orders AS ORDERS
