@@ -4,5 +4,5 @@ JOB_TITLE AS Cargo,
 FROM
 hr.jobs
 ORDER BY 
-'Diferença entre salários máximo e mínimo',
+`Diferença entre salários máximo e mínimo`,
 Cargo;
