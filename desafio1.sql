@@ -8,4 +8,3 @@ ELSE
 REGION_ID = 'não incluído'
 END AS  'Status Inclusão'
 FROM hr.countries;
-
