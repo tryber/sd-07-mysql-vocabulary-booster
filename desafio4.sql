@@ -15,4 +15,4 @@ INNER JOIN (SELECT JOB_ID, AVG(SALARY) AS Media FROM hr.employees
   INNER JOIN hr.jobs AS J
   ON E.JOB_ID = J.JOB_ID
   ORDER BY ROUND(t2.Media, 2), Cargo;
-  
+
