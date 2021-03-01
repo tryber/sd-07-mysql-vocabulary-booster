@@ -9,4 +9,3 @@ ON order_details.ProductID = products.ProductID
 GROUP BY products.ProductID
 HAVING `Média` > 20
 ORDER BY Média, Produto;
-
