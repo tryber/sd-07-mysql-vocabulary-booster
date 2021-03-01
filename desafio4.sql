@@ -13,23 +13,21 @@
 -- Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
 
 SELECT
-	group_jobs.Cargo,
-    group_jobs.`Média salarial`,
-    CASE
-		WHEN group_jobs.`Média salarial` <= 5800 THEN 'Júnior'
-        WHEN group_jobs.`Média salarial` <= 7500 AND group_jobs.`Média salarial` > 5800 THEN 'Pleno'
-        WHEN group_jobs.`Média salarial` <= 10500 AND group_jobs.`Média salarial` > 7500 THEN 'Sênior'
-        ELSE 'CEO'
- 	END AS 'Senioridade'
-	FROM (
-		SELECT
-			jobs.JOB_TITLE AS 'Cargo',
-			ROUND(AVG(employees.SALARY), 2) AS `Média salarial`
-		FROM hr.jobs AS jobs
-		INNER JOIN hr.employees AS employees
-		ON jobs.JOB_ID = employees.JOB_ID
-		GROUP BY employees.JOB_ID
-	) AS group_jobs
-    ORDER BY group_jobs.`Média salarial` ASC, group_jobs.Cargo ASC;
-
-
+group_jobs.Cargo,
+group_jobs.`Média salarial`,
+CASE
+	WHEN group_jobs.`Média salarial` <= 5800 THEN 'Júnior'
+	WHEN group_jobs.`Média salarial` <= 7500 AND group_jobs.`Média salarial` > 5800 THEN 'Pleno'
+	WHEN group_jobs.`Média salarial` <= 10500 AND group_jobs.`Média salarial` > 7500 THEN 'Sênior'
+	ELSE 'CEO'
+END AS 'Senioridade'
+FROM (
+	SELECT
+		jobs.JOB_TITLE AS 'Cargo',
+		ROUND(AVG(employees.SALARY), 2) AS `Média salarial`
+	FROM hr.jobs AS jobs
+	INNER JOIN hr.employees AS employees
+	ON jobs.JOB_ID = employees.JOB_ID
+	GROUP BY employees.JOB_ID
+) AS group_jobs
+ORDER BY group_jobs.`Média salarial` ASC, group_jobs.Cargo ASC;

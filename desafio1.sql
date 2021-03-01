@@ -6,8 +6,8 @@
 -- Os resultados devem estar ordenados pelo nome do país em ordem alfabética.
 
 SELECT
-	countries.COUNTRY_NAME AS 'País',
-    IF (regions.REGION_NAME = 'Europe', 'incluído', 'não incluído') AS 'Status Inclusão'
+countries.COUNTRY_NAME AS 'País',
+IF (regions.REGION_NAME = 'Europe', 'incluído', 'não incluído') AS 'Status Inclusão'
 FROM hr.countries AS countries
 INNER JOIN hr.regions AS regions
 ON countries.REGION_ID = regions.REGION_ID
