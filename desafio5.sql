@@ -6,4 +6,4 @@ ROUND(MAX(e.salary), 2) AS 'Média máxima mensal'
 FROM hr.employees e
 LEFT JOIN hr.jobs j ON j.job_id = e.job_id
 GROUP BY Cargo
-ORDER BY 'Variação Salarial', Cargo;
+ORDER BY (j.max_salary - j.min_salary), Cargo;

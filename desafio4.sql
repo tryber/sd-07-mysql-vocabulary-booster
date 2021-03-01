@@ -10,4 +10,4 @@ END AS 'Senioridade'
 FROM hr.employees e
 LEFT JOIN hr.jobs j ON e.job_id = j.job_id
 GROUP BY Cargo
-ORDER BY 'Média salarial', Cargo;
+ORDER BY ROUND(AVG(e.salary), 2), Cargo;
