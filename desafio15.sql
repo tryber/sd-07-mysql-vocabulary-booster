@@ -1,3 +1,4 @@
+USE hr;
 DELIMITER $$
 CREATE PROCEDURE buscar_media_por_cargo(IN job VARCHAR(50))
 BEGIN
