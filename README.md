@@ -231,7 +231,7 @@ MYSQL_USER=root MYSQL_PASSWORD= HOSTNAME=localhost npm test
   5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
 
 ---
-D/MM/YYYY -
+
 ### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
 
 Para sinalizar que o seu projeto está pronto para o _"Code Review"_ de colegas, faça o seguinte:
