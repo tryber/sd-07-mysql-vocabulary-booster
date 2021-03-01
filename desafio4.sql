@@ -7,4 +7,4 @@ FROM hr.jobs as job
 inner join hr.employees as employee
 on job.JOB_ID = employee.JOB_ID
 group by employee.JOB_ID
-order by round(avg(employee.SALARY), 2);
+order by round(avg(employee.SALARY), 2), job.JOB_TITLE;
