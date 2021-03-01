@@ -1,22 +1,17 @@
 SELECT
 (
 SELECT
-CONCAT(FIRST_NAME, ' ' ,LAST_NAME)
+  UCASE(CONCAT(FIRST_NAME, ' ' ,LAST_NAME))
   FROM hr.employees
-  WHERE employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
+  WHERE hr.employees.EMPLOYEE_ID = hr.job_history.EMPLOYEE_ID
 ) AS `Nome completo`,
+START_DATE AS 'Data de início',
 (
 SELECT
-  JOB_TITLE
-  FROM hr.jobs
-  WHERE jobs.JOB_ID = job_history.JOB_ID
-) AS `Cargo`,
-START_DATE AS 'Data de início do cargo',
-(
-SELECT
-  DEPARTMENT_NAME
-  FROM hr.departments
-  WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
-) AS 'Departamento'
+  SALARY
+  FROM hr.employees
+  WHERE hr.employees.EMPLOYEE_ID = hr.job_history.EMPLOYEE_ID
+) AS `Salário`
 FROM hr.job_history
-ORDER BY `Nome completo` DESC, `Cargo` ASC;
+WHERE MONTH(START_DATE) = 1 OR MONTH(START_DATE) = 2 OR MONTH(START_DATE) = 3
+ORDER BY `Nome completo`, `Salário`;
