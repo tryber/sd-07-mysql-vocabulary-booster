@@ -10,4 +10,4 @@ FROM hr.jobs AS j
 INNER JOIN hr.employees AS e 
 ON e.JOB_ID = j.JOB_ID
 GROUP BY j.JOB_ID
-ORDER BY 'Média salarial', Cargo;
+ORDER BY AVG(e.SALARY), Cargo;
