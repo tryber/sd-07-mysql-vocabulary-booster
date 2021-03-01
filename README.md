@@ -157,7 +157,7 @@ Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso 
 
   - Será um dia de projeto.
   
-  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+  - Data de entrega para avaliação final do projeto: `08/03/2021- 14:00h`.
 
 ---
 
