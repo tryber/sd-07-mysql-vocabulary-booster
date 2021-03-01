@@ -8,4 +8,4 @@ JOIN hr.jobs j
 ON e.job_id = j.job_id
 JOIN hr.departments d
 ON e.department_id = d.department_id
-ORDER BY CONCAT(first_name, ' ', last_name) DESC, j.job_title DESC;
+ORDER BY CONCAT(first_name, ' ', last_name) DESC, job_title;
