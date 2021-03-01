@@ -5,9 +5,8 @@ department.DEPARTMENT_NAME AS "Departamento"
 FROM hr.employees AS employe
 INNER JOIN hr.job_history AS history_job
 ON history_job.EMPLOYEE_ID = employe.EMPLOYEE_ID
-LEFT JOIN hr.jobs AS job
+INNER JOIN hr.jobs AS job
 ON job.JOB_ID = history_job.JOB_ID
-LEFT JOIN hr.departments AS department
-ON department.DEPARTMENT_ID = employe.DEPARTMENT_ID
-GROUP BY employe.EMPLOYEE_ID
+INNER JOIN hr.departments AS department
+ON department.DEPARTMENT_ID = history_job.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC,Cargo;
