@@ -14,6 +14,6 @@ on t1.EMPLOYEE_ID = t2.EMPLOYEE_ID
 group by EMPLOYEE_ID 
 HAVING t2.email = email) as tt
 into total;
-RETURN TOTAL;
+RETURN cast(TOTAL as DECIMAL(10,0));
 END $$
 DELIMITER ;
