@@ -6,4 +6,5 @@ INNER JOIN w3schools.orders AS order_data
 ON customer.CustomerID = order_data.CustomerID
 INNER JOIN w3schools.shippers AS shippers
 ON shippers.ShipperID = order_data.ShipperID
+WHERE shippers.ShipperName = "Speedy Express" OR shippers.ShipperName = "United Package"
 ORDER BY `Nome de contato`,`Empresa que fez o envio`,`Data do pedido`;
