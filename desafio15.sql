@@ -3,7 +3,7 @@ DELIMITER $$
 CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(50))
 BEGIN
   SELECT
-  cast(AVG(t1.SALARY) as decimal(10,2)) as `Média Salarial`
+  cast(AVG(t1.SALARY) as decimal(10,2)) as `Média salarial`
   from employees as t1
   INNER JOIN jobs as t2 
   on t1.job_id = t2.job_id
