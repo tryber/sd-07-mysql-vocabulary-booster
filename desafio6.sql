@@ -3,8 +3,8 @@ J.JOB_TITLE AS Cargo,
 JH.START_DATE AS `Data de início do cargo`,
 D.DEPARTMENT_NAME AS Departamento
 FROM hr.employees AS E
-JOIN jobs as J
-JOIN job_history AS JH
+JOIN hr.jobs as J
+JOIN hr.job_history AS JH
 ON J.JOB_ID = JH.JOB_ID
 ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID
 JOIN hr.departments AS D
