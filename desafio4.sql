@@ -1,0 +1,1 @@
+Select JOB_TITLE as 'Cargo', round((MAX_SALARY + MIN_SALARY) / 2) as 'Diferença entre salários máximo e mínimo' from hr.jobs order by JOB_TITLE;
