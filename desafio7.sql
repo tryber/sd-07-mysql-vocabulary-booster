@@ -5,7 +5,7 @@ employees.HIRE_DATE AS 'Data de início',
 employees.SALARY AS 'Salário',
 Month(employees.HIRE_DATE)
 from hr.employees as employees 
- 
+
 INNER JOIN hr.jobs AS JOBS 
 on JOBS.JOB_ID = employees.JOB_ID
 INNER JOIN hr.departments as departments
