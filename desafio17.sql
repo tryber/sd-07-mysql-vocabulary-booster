@@ -4,7 +4,7 @@ CREATE TRIGGER ihaa
 BEFORE INSERT ON w3schools.orders
 FOR EACH ROW
 BEGIN
-	SET NEW.OrderDate = now();
+SET NEW.OrderDate = now();
 END $$
 
 DELIMITER ;
