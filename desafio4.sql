@@ -12,4 +12,4 @@ FROM hr.jobs AS J
 INNER JOIN hr.employees E
 WHERE J.JOB_ID = E.JOB_ID
 GROUP BY `Cargo`
-ORDER BY `Média salarial`, `Senioridade` ASC;
+ORDER BY `Média salarial`, `Cargo` ASC;
