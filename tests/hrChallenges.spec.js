@@ -59,7 +59,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo', () => {
-    it.skip('Verifica o desafio 4', async () => {
+    it('Verifica o desafio 4', async () => {
       const challengeQuery = readFileSync('desafio4.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult4');
 
