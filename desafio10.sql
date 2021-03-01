@@ -7,4 +7,4 @@ inner join w3schools.products as p
 on o.ProductID = p.ProductID
 group by o.ProductID
 having `Média` > 20.00
-order by `Média`, `Produto`;
+order by `Média`, p.ProductName asc;
