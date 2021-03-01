@@ -1,6 +1,6 @@
 SELECT País FROM
 (SELECT Country AS País FROM w3schools.customers AS C
-UNNION ALL
+UNION ALL
 SELECT Country AS País FROM w3schools.suppliers AS S) AS T
 GROUP BY País
 ORDER BY País
