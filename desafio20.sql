@@ -18,4 +18,3 @@ ORDER BY 2, 3;
 END $$
 
 DELIMITER $$
-CALL exibir_historico_completo_por_funcionario('NKOCHHAR');
