@@ -8,4 +8,4 @@ END AS "Senioridade"
 FROM hr.employees e
 INNER JOIN hr.jobs j ON j.JOB_ID = e.JOB_ID
 GROUP BY Cargo
-ORDER BY AVG(SALARY);
+ORDER BY AVG(SALARY), Cargo;
