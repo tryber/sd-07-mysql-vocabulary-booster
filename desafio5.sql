@@ -6,4 +6,4 @@ SELECT
 FROM
     hr.jobs
 GROUP BY JOB_ID
-ORDER BY `Variação Salarial` , JOB_TITLE;
+ORDER BY 'Variação Salarial' , JOB_TITLE;
