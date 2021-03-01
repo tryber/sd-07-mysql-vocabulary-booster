@@ -68,7 +68,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Exiba os cargos com sua variação salarial e suas médias máxima e mínima mensal, considerando salários máximo e minímo como anuais', () => {
-    it.skip('Verifica o desafio 5', async () => {
+    it('Verifica o desafio 5', async () => {
       const challengeQuery = readFileSync('desafio5.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult5');
 
