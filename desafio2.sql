@@ -12,10 +12,10 @@
 -- Os resultados devem estar ordenados pelo nome do cargo em ordem alfabética.
 SELECT J.job_title as "Cargo",
 CASE
-WHEN (J.MAX_SALARY >= 5000 AND J.MAX_SALARY <= 10000) THEN 'Baixo'
-WHEN (J.MAX_SALARY >= 10001 AND J.MAX_SALARY <= 20000) THEN 'Médio'
-WHEN (J.MAX_SALARY >= 20001 AND J.MAX_SALARY <= 30000) THEN 'Alto'
-WHEN J.MAX_SALARY > 30000 THEN 'Altíssimo'
+WHEN (J.MAX_SALARY >= 5.000 AND J.MAX_SALARY <= 10.000) THEN 'Baixo'
+WHEN (J.MAX_SALARY >= 10.001 AND J.MAX_SALARY <= 20.000) THEN 'Médio'
+WHEN (J.MAX_SALARY >= 20.001 AND J.MAX_SALARY <= 30.000) THEN 'Alto'
+WHEN J.MAX_SALARY > 30.000 THEN 'Altíssimo'
 END AS "Nível"
 FROM 	hr.employees AS E
 INNER JOIN hr.jobs as J
