@@ -9,4 +9,4 @@ INNER JOIN hr.employees AS E ON E.EMPLOYEE_ID = J.EMPLOYEE_ID
 WHERE E.EMAIL = email INTO empregos;
 RETURN empregos;
 END $$
-DELIMITER ;
+DELIMITER;
