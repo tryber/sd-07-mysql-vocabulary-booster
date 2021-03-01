@@ -4,4 +4,4 @@ UNION
 SELECT S.Country AS 'País'
 FROM w3schools.suppliers AS S
 ORDER BY 1
-LIMIT 5
+LIMIT 5;

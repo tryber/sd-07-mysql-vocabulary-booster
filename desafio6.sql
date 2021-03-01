@@ -1,7 +1,7 @@
 SELECT concat(tabName.first_name, ' ',  tabName.last_name) AS 'Nome completo',
-	tabJob.job_title AS 'Cargo',
-	tabStart.start_date AS 'Data de início do cargo',
-	tabDep.department_name AS 'Departamento'
+tabJob.job_title AS 'Cargo',
+tabStart.start_date AS 'Data de início do cargo',
+tabDep.department_name AS 'Departamento'
 FROM hr.job_history as tabStart
 INNER JOIN hr.employees as tabName
 ON tabStart.EMPLOYEE_ID = tabName.EMPLOYEE_ID
