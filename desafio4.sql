@@ -5,7 +5,7 @@ CASE
     WHEN AVG(E.SALARY) BETWEEN 7501 AND 10500 THEN "Sênior"
 	ELSE "CEO"
 END
-AS "Senhoridade"
+AS "Senioridade"
 FROM hr.jobs AS J
 INNER JOIN hr.employees E
 WHERE J.JOB_ID = E.JOB_ID
