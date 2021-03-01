@@ -16,8 +16,7 @@ E.HIRE_DATE AS "Data de início",
 E.SALARY AS "Salário"
 FROM hr.employees AS E
 WHERE
-MONTH(E.HIRE_DATE) IN (1, 2, 3)
+MONTH(E.HIRE_DATE) IN (6, 7)
 ORDER BY
-MONTH(E.HIRE_DATE),
 1,
 E.HIRE_DATE;
