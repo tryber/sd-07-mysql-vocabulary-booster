@@ -1,8 +1,7 @@
 SELECT
-  j.job_title AS 'Cargo',
-  (j.max_salary - j.min_salary) AS 'Variação Salarial'
-FROM hr.employees AS e
-JOIN hr.jobs AS j
-ON e.job_id = j.job_id
-GROUP BY cargo
+  job_title AS 'Cargo',
+  (max_salary - min_salary) AS 'Variação Salarial',
+  ROUND(min_salary / 12, 2) AS 'Média mínima mensal',
+  ROUND(max_salary / 12, 2) AS 'Média máxima mensal'
+FROM hr.jobs
 ORDER BY `Variação Salarial`, cargo;
