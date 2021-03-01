@@ -1,4 +1,3 @@
-
 SELECT 
   products.ProductName AS "Produto",
   MIN(order_details.Quantity) AS "Mínima",
