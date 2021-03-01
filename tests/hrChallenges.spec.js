@@ -50,7 +50,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Exiba os cargos com a diferença entre seus salários máximo e mínimo', () => {
-    it.skip('Verifica o desafio 3', async () => {
+    it('Verifica o desafio 3', async () => {
       const challengeQuery = readFileSync('desafio3.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult3');
 
