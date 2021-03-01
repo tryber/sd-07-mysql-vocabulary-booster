@@ -41,7 +41,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Exiba os cargos com seu nível de renumeração associado, com base no salário máximo do cargo', () => {
-    it('Verifica o desafio 2', async () => {
+    it.skip('Verifica o desafio 2', async () => {
       const challengeQuery = readFileSync('desafio2.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult2');
 
@@ -50,7 +50,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Exiba os cargos com a diferença entre seus salários máximo e mínimo', () => {
-    it('Verifica o desafio 3', async () => {
+    it.skip('Verifica o desafio 3', async () => {
       const challengeQuery = readFileSync('desafio3.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult3');
 
@@ -59,7 +59,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo', () => {
-    it('Verifica o desafio 4', async () => {
+    it.skip('Verifica o desafio 4', async () => {
       const challengeQuery = readFileSync('desafio4.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult4');
 
@@ -68,7 +68,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Exiba os cargos com sua variação salarial e suas médias máxima e mínima mensal, considerando salários máximo e minímo como anuais', () => {
-    it('Verifica o desafio 5', async () => {
+    it.skip('Verifica o desafio 5', async () => {
       const challengeQuery = readFileSync('desafio5.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult5');
 
@@ -77,7 +77,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Faça um relatório que mostra o **histórico de cargos das pessoas empregadas**', () => {
-    it('Verifica o desafio 6', async () => {
+    it.skip('Verifica o desafio 6', async () => {
       const challengeQuery = readFileSync('desafio6.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult6');
 
@@ -86,7 +86,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março', () => {
-    it('Verifica o desafio 7', async () => {
+    it.skip('Verifica o desafio 7', async () => {
       const challengeQuery = readFileSync('desafio7.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult7');
 
@@ -95,7 +95,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Faça um relatório que lista todas as pessoas funcionárias **que possuem o mesmo cargo**', () => {
-    it('Verifica o desafio 12', async () => {
+    it.skip('Verifica o desafio 12', async () => {
       const challengeQuery = readFileSync('desafio12.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult12');
 
@@ -104,7 +104,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Crie uma procedure chamada `buscar_media_por_cargo` que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo', () => {
-    it('Verifica o desafio 15', async () => {
+    it.skip('Verifica o desafio 15', async () => {
       const challengeQuery = readFileSync('desafio15.sql', 'utf8').trim();
       const createProcedureQuery = /CREATE PROCEDURE.*END/si.exec(challengeQuery)[0];
 
@@ -118,7 +118,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Crie uma função chamada `buscar_quantidade_de_empregos_por_funcionario` no banco de dados `hr` que, ao receber o **email de uma pessoa funcionária**, retorne a quantidade de empregos **presentes em seu histórico**', () => {
-    it('Verifica o desafio 16', async () => {
+    it.skip('Verifica o desafio 16', async () => {
       const challengeQuery = readFileSync('desafio16.sql', 'utf8').trim();
       const createFunctionQuery = /CREATE FUNCTION.*END/si.exec(challengeQuery)[0];
 
@@ -136,7 +136,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Faça um relatório que mostra o **histórico de cargos das pessoas empregadas**, mostrando as datas de início e de saída, assim como os anos que ela ficou nesse cargo', () => {
-    it('Verifica o desafio 18', async () => {
+    it.skip('Verifica o desafio 18', async () => {
       const challengeQuery = readFileSync('desafio18.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult18');
 
@@ -145,7 +145,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Crie uma função chamada `exibir_quantidade_pessoas_contratadas_por_mes_e_ano` no banco de dados `hr` que, dados o mês e ano como parâmetros nessa ordem, retorna a quantidade de pessoas funcionárias **que foram contratadas** nesse mês e ano', () => {
-    it('Verifica o desafio 19', async () => {
+    it.skip('Verifica o desafio 19', async () => {
       const challengeQuery = readFileSync('desafio19.sql', 'utf8').trim();
       const createFunctionQuery = /CREATE FUNCTION.*END/si.exec(challengeQuery)[0];
 
@@ -163,7 +163,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Toda pessoa funcionária no banco `hr` possui um histórico completo de cargos. Logo, crie uma procedure chamada `exibir_historico_completo_por_funcionario` que, dado o e-mail de uma pessoa funcionária, retorna todos os cargos em seu histórico', () => {
-    it('Verifica o desafio 20', async () => {
+    it.skip('Verifica o desafio 20', async () => {
       const challengeQuery = readFileSync('desafio20.sql', 'utf8').trim();
       const createProcedureQuery = /CREATE PROCEDURE.*END/si.exec(challengeQuery)[0];
 
