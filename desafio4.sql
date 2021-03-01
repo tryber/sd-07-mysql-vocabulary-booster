@@ -1,4 +1,4 @@
-SELECT j.job_title, AVG(salary) AS 'Média salarial',
+SELECT j.job_title AS 'Cargo', CAST(AVG(salary) AS DECIMAL(10,2)) AS 'Média salarial',
 CASE
 WHEN AVG(salary) BETWEEN 2000 AND 5800 THEN 'Júnior'
 WHEN AVG(salary) BETWEEN 5801 AND 7500 THEN 'Pleno'
