@@ -1,10 +1,10 @@
-select 
-products.ProductName as Produto,
-MIN(details.Quantity) as Mínima ,
-MAX(details.Quantity) as Máxima,
-round(avg(details.Quantity),2) as Média
-from w3schools.products as products
-INNER JOIN w3schools.order_details as details
-on products.ProductID = details.ProductID
-Group by products.ProductName
-order by round(avg(details.Quantity),2), products.ProductName;
+SELECT 
+products.ProductName AS Produto,
+MIN(details.Quantity) AS Mínima ,
+MAX(details.Quantity) AS Máxima,
+round(avg(details.Quantity),2) AS Média
+FROM w3schools.products AS products
+INNER JOIN w3schools.order_details AS details
+ON products.ProductID = details.ProductID
+GROUP BY products.ProductName
+ORDER BY round(avg(details.Quantity),2), products.ProductName;

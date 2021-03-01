@@ -1,8 +1,8 @@
-select 
+SELECT 
 t1.ContactName as Nome,
-t1.Country as País,
+t1.Country AS País,
 count(*)
-from w3schools.customers as t1, w3schools.customers as t2
-where t1.Country = t2.Country and t1.CustomerID <> t2.CustomerID
-group by t1.CustomerID
-order by t1.ContactName;
+FROM w3schools.customers AS t1, w3schools.customers AS t2
+WHERE t1.Country = t2.Country AND t1.CustomerID <> t2.CustomerID
+GROUP BY t1.CustomerID
+ORDER BY t1.ContactName;

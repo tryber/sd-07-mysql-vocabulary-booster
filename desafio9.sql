@@ -1,7 +1,7 @@
-select 
+SELECT 
 concat(employees.FirstName, ' ', employees.LastName) AS 'Nome completo',
 count(*)
-from w3schools.employees as employees
-INNER JOIN w3schools.orders as orders
-on employees.EmployeeID = orders.EmployeeID
-group by employees.EmployeeID;
+FROM w3schools.employees AS employees
+INNER JOIN w3schools.orders AS orders
+ON employees.EmployeeID = orders.EmployeeID
+GROUP BY employees.EmployeeID;
