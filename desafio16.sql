@@ -1,7 +1,7 @@
 use hr
 DELIMITER $$
 create FUNCTION buscar_quantidade_de_empregos_por_funcionario(email varchar(30))
-RETURNS NUMERIC READS SQL DATA
+RETURNS INT READS SQL DATA
 BEGIN
 DECLARE total INT;
 SELECT totaljob from (select 
