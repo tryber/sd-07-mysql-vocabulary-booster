@@ -8,7 +8,7 @@ SELECT
         WHEN ROUND((SUM(t1.SALARY) / COUNT(*)), 2) > 10500 THEN 'CEO'
     END AS "Senioridade"
 FROM hr.employees AS t1
-         INNER JOIN hr.jobs as t2
+    INNER JOIN hr.jobs as t2
 WHERE t2.JOB_ID = t1.JOB_ID
 GROUP BY t2.JOB_TITLE
 ORDER BY ROUND((SUM(t1.SALARY) / COUNT(*)), 2), t2.JOB_TITLE;
