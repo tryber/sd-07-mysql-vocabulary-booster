@@ -5,4 +5,4 @@ e.SALARY AS `Salário`
 FROM hr.employees AS e
 INNER JOIN hr.job_history AS h
 ON e.JOB_ID = h.JOB_ID
-ORDER BY `Nome completo`, `Data de início`;
+ORDER BY `Nome completo`, `Data de início` DESC;
