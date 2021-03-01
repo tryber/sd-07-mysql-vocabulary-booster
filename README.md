@@ -157,7 +157,7 @@ Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso 
 
   - Será um dia de projeto.
   
-  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+  - Data de entrega para avaliação final do projeto: `08/03/2021- 14:00h`.
 
 ---
 
@@ -231,7 +231,7 @@ MYSQL_USER=root MYSQL_PASSWORD= HOSTNAME=localhost npm test
   5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
 
 ---
-
+D/MM/YYYY -
 ### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
 
 Para sinalizar que o seu projeto está pronto para o _"Code Review"_ de colegas, faça o seguinte:
