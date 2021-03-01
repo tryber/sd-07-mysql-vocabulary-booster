@@ -1,10 +1,13 @@
 use hr;
 delimiter $$
 
-create procedure buscar_quantidade_de_empregos_por_funcionario(in email varchar(25))
+create function buscar_quantidade_de_empregos_por_funcionario(emailInput varchar(25))
+returns int reads sql data
 begin
-select count(*) from hr.job_history where EMPLOYEE_ID = (select EMPLOYEE_ID
-from hr.employees where email = email);
+declare total_empregos int;
+select count(*) from job_history where EMPLOYEE_ID = (select EMPLOYEE_ID
+from employees where email = emailInput limit 1) into total_empregos;
+return total_empregos;
 end $$
 
 delimiter ;
