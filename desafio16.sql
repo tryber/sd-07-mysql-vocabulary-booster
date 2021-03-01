@@ -1,4 +1,3 @@
-USE hr;
 DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(employeeEmail VARCHAR(50))
 RETURNS NUMERIC READS SQL DATA
