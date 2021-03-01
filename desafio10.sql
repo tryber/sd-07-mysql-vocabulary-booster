@@ -8,4 +8,4 @@ INNER JOIN products as t2
 on t1.ProductID = t2.ProductID
 group by t2.ProductName
 HAVING avg(t1.quantity) > 20
-order by AVG(t1.Quantity), t2.ProductName
+order by AVG(t1.Quantity), t2.ProductName;
