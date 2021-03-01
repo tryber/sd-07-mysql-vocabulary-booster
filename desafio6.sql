@@ -14,4 +14,6 @@ ON h.JOB_ID = j.JOB_ID
 LEFT JOIN hr.departments d
 ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
 
+WHERE j.JOB_TITLE IS NOT NULL
+
 ORDER BY `Nome completo` DESC, Cargo;
