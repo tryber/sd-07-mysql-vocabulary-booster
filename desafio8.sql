@@ -4,4 +4,4 @@ O.OrderDate `Data do pedido`
 FROM w3schools.shippers S, w3schools.customers C, w3schools.orders O
 WHERE  S.ShipperID=O.ShipperID AND C.CustomerID=O.CustomerID
 AND S.ShipperName IN ('Speedy Express', 'United Package')
-ORDER BY `Nome de contato`, `Empresa que fez o envio`;
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
