@@ -7,5 +7,5 @@ FROM w3schools.products AS P
 INNER JOIN w3schools.order_details AS OD
 ON OD.ProductID = P.ProductID
 GROUP BY P.ProductName
-HAVING(AVG((od.Quantity)) > 20)
+HAVING(AVG((OD.Quantity)) > 20)
 ORDER BY ROUND(AVG(OD.Quantity) , 2), P.ProductName;
