@@ -1,10 +1,9 @@
 use w3schools;
 DELIMITER $$
 CREATE TRIGGER novoRegistro
-after INSERT on orders
+before INSERT on orders
 for each row
 begin 
-insert into orders (OrderDate)
-values(current_date());
+set new.OrderDate = current_date();
 end $$
 DELIMITER ;
