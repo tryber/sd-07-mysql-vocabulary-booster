@@ -1,10 +1,11 @@
-SELECT 
-    t1.Country AS 'País'
+(SELECT
+    Country AS País
 FROM
-    w3schools.customers AS t1,
-    w3schools.customers AS t2
-WHERE
-    t1.CustomerID <> t2.CustomerID
-GROUP BY País
-ORDER BY País
+    w3schools.customers)
+UNION
+(SELECT
+    Country AS País
+FROM
+    w3schools.suppliers)
+ORDER BY País ASC
 LIMIT 5;
