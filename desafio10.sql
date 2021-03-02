@@ -6,5 +6,5 @@ FROM w3schools.products AS prod
 INNER JOIN w3schools.order_details AS det
 ON prod.ProductID = det.ProductID
 GROUP BY det.ProductID
-WHERE `Média` > 20.00
+HAVING `Média` > 20.00
 ORDER BY `Média` ASC, `Produto`;
