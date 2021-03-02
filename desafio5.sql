@@ -1,11 +1,10 @@
-SELECT 
-  CONCAT(emp.FIRST_NAME,' ',emp.LAST_NAME) AS 'Nome completo',
-  jb.JOB_TITLE AS 'Cargo',
-  START_DATE AS 'Data de início do cargo',
-  dp.DEPARTMENT_NAME AS 'Departamento'
-FROM 
-  hr.job_history AS JO_H
-INNER
- 
+SELECT
+  JOB_TITLE AS 'Cargo',
+  (MAX_SALARY - MIN_SALARY) AS 'Variação Salarial',
+  ROUND(AVG(MIN_SALARY / 12), 2) AS 'Média mínima mensal',
+  ROUND(AVG(MAX_SALARY / 12), 2) AS 'Média máxima mensal'
+FROM
+  hr.jobs
 ORDER BY
-  CONCAT(FIRST_NAME,' ',LAST_NAME) DESC, JOB_TITLE ASC ;
+  (MAX_SALARY - MIN_SALARY) ASC, JOB_TITLE ASC;
+
