@@ -9,4 +9,4 @@ INNER JOIN shippers AS s ON
 o.ShipperID = s.ShipperID
 WHERE s.ShipperName = 'Speedy Express' 
 OR s.ShipperName = 'United Package'
-ORDER BY `Nome do contato`, `Data do pedido`;
+ORDER BY `Nome do contato`, `Empresa que fez o envio`, `Data do pedido`;

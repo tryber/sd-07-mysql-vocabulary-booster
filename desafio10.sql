@@ -8,4 +8,5 @@ FROM products AS p
 INNER JOIN order_details AS o ON
 p.ProductID = o.ProductID
 GROUP BY p.ProductID
+HAVING ROUND(AVG(o.Quantity), 2) > 20
 ORDER BY `Média`, `Produto`;
