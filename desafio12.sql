@@ -9,5 +9,5 @@ e2.PHONE_NUMBER as 'Telefone funcionário 2'
 FROM hr.employees as e1, hr.employees as e2
 where e1.JOB_ID = e2.JOB_ID
 and (e1.FIRST_NAME <> e2.FIRST_NAME
-and e1.LAST_NAME <> e2.LAST_NAME)
+or e1.LAST_NAME <> e2.LAST_NAME)
 order by `Nome completo funcionário 1`, `Nome completo funcionário 2`;
