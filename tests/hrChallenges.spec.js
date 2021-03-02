@@ -86,7 +86,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março', () => {
-    it.skip('Verifica o desafio 7', async () => {
+    it('Verifica o desafio 7', async () => {
       const challengeQuery = readFileSync('desafio7.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult7');
 
