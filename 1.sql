@@ -1,6 +1,8 @@
 -- Desafio 01
 
-SELECT COUNTRY_NAME AS 'País',
-IF (REGION_ID = 1, 'incluído', 'não incluído') AS 'Status Inclusão'
-FROM hr.countries
-ORDER BY País;
+SELECT countries.COUNTRY_NAME AS 'País',
+IF (regions.REGION_NAME = 'Europe', 'incluído', 'não incluído') AS 'Status Inclusão'
+FROM hr.countries AS countries
+INNER JOIN hr.regions AS regions
+ON countries.REGION_ID = regions.REGION_ID
+ORDER BY countries.COUNTRY_NAME;
