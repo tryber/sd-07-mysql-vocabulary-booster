@@ -5,4 +5,4 @@ FROM customers AS a
 LEFT JOIN customers AS b
 ON a.country=b.country
 GROUP BY a.contactname, a.country
-ORDER BY a.contactname;
+HAVING(COUNT(*)>1) ORDER BY a.contactname;
