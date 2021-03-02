@@ -5,4 +5,5 @@ FROM w3schools.customers AS customer1
 INNER JOIN w3schools.customers AS customer2
 ON customer1.Country = customer2.Country
 GROUP BY customer1.CustomerID
+HAVING `Número de compatriotas` > 0
 ORDER BY Nome;
