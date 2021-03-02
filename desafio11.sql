@@ -13,4 +13,3 @@ WHERE
   cust2.Qtd - 1 > 0 
 ORDER BY
   Nome;
-  
