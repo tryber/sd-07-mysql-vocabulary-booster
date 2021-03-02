@@ -2,7 +2,7 @@ SELECT
 uefa_countries.COUNTRY_NAME AS `País`,
 IF(
 uefa_regions.REGION_NAME = 'Europe',
-'Incluído', 'não incluído'
+'incluído', 'não incluído'
 ) AS `Status Inclusão`
 FROM
 hr.countries AS uefa_countries
