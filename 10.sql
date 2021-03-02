@@ -11,4 +11,3 @@ ON p.ProductID = od.ProductID
 GROUP BY p.ProductName
 HAVING `Média` > 20
 ORDER BY `Média`, `Produto`;
-
