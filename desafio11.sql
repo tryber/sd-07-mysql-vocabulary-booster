@@ -17,3 +17,4 @@ C.COUNTRY = C2.COUNTRY AND
 C.CustomerID <> C2.CustomerID
 GROUP BY
 C.CustomerID
+ORDER BY 1;
