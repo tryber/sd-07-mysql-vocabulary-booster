@@ -7,4 +7,4 @@ INNER JOIN w3schools.order_details AS ordD
 ON prod.ProductID = ordD.ProductID
 GROUP BY prod.ProductName
 HAVING Média > 20
-ORDER BY Média, Produto;
+ORDER BY Média, prod.ProductName;

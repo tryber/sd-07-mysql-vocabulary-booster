@@ -5,4 +5,4 @@ FROM hr.employees AS empl
 INNER JOIN hr.job_history AS jobH
 ON empl.EMPLOYEE_ID = jobH.EMPLOYEE_ID
 WHERE MONTH(START_DATE) < 4
-ORDER BY CONCAT(empl.FIRST_NAME," ",empl.LAST_NAME), jobH.START_DATE;
+ORDER BY `Nome completo`, jobH.START_DATE;

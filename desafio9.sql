@@ -4,4 +4,4 @@ FROM w3schools.employees AS empl
 INNER JOIN w3schools.orders AS ord
 ON empl.EmployeeID = ord.EmployeeID
 GROUP BY CONCAT(empl.FirstName," ", empl.LastName)
-ORDER BY COUNT(ord.EmployeeID);
+ORDER BY `Total de pedidos`;
