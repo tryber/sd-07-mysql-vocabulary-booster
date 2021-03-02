@@ -12,4 +12,4 @@ FROM
         JOIN
     hr.jobs AS j ON e.JOB_ID = j.JOB_ID
 GROUP BY e.JOB_ID
-ORDER BY `Média salarial`;
+ORDER BY AVG(e.SALARY);
