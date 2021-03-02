@@ -10,16 +10,24 @@
 -- arredondada para duas casas decimais.
 -- Os resultados devem estar ordenados pela média de quantidade nos pedidos em ordem crescente.
 -- Em caso de empate na média, os resultados devem ser ordenados pelo nome do produto em ordem alfabética.
--- P.ProductName, MIN(OD.QUANTITY)
--- OD.Quantity >= 20 AND P.PRODUCTID = 19
 SELECT 
-P.ProductName, 
-MIN(OD.Quantity),
-MAX(OD.Quantity),
-ROUND(AVG(OD.Quantity), 2)
+C.Produto,
+C.Mínima,
+C.Máxima,
+C.Média
+FROM (
+SELECT 
+P.ProductName as "Produto", 
+MIN(OD.Quantity) as "Mínima",
+MAX(OD.Quantity) as "Máxima",
+ROUND(AVG(OD.Quantity), 2) as "Média"
 FROM w3schools.order_details AS OD
 INNER JOIN w3schools.products AS P ON P.ProductID = OD.ProductID
 GROUP BY
 OD.ProductID
+) AS C
+WHERE
+C.Média > 20
 ORDER BY
+4,
 1;
