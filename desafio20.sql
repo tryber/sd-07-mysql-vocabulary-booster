@@ -13,6 +13,7 @@ left join hr.employees as emp
 on emp.EMPLOYEE_ID = history.EMPLOYEE_ID
 left join hr.departments as departments
 on departments.DEPARTMENT_ID = history.DEPARTMENT_ID
-where emp.EMAIL = emailEntrada;
+where emp.EMAIL = emailEntrada
+order by 2, 3;
 end $$;
 DELIMITER ;
