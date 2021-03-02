@@ -12,4 +12,5 @@ into total;
 return total;
 end $$
 DELIMITER ;
+
     
