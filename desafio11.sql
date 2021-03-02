@@ -1,7 +1,7 @@
 SELECT
-	cp1.ContactName AS 'Nome',
-	cp1.Country AS 'País',
-	COUNT(*) - 1 AS 'Número de compatriotas'
+cp1.ContactName AS 'Nome',
+cp1.Country AS 'País',
+COUNT(*) - 1 AS 'Número de compatriotas'
 FROM w3schools.customers AS cp1,
 w3schools.customers AS cp2
 WHERE cp1.Country = cp2.Country
