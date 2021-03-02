@@ -4,12 +4,12 @@ j.JOB_TITLE AS 'Cargo',
 h.START_DATE AS 'Data de início do cargo',
 d.DEPARTMENT_NAME AS 'Departamento'
 
-FROM hr.employees e
+FROM hr.job_history h
 
 INNER JOIN hr.jobs j
-ON e.JOB_ID = j.JOB_ID
+ON h.JOB_ID = j.JOB_ID
 
-INNER JOIN hr.job_history h
+INNER JOIN hr.employees e
 ON e.EMPLOYEE_ID = h.EMPLOYEE_ID
 
 INNER JOIN hr.departments d
