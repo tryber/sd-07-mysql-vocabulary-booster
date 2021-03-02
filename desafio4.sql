@@ -9,4 +9,4 @@ when avg (employees.SALARY) > 10500 then 'CEO'
 END AS Senioridade
 FROM hr.jobs AS JOBS INNER JOIN hr.employees AS employees ON JOBS.JOB_ID = employees.JOB_ID 
 GROUP BY JOBS.JOB_TITLE 
-ORDER BY 'Média salarial', JOBS.JOB_TITLE;
+ORDER BY 2, JOBS.JOB_TITLE;
