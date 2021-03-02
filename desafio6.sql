@@ -6,4 +6,3 @@ ON employees.job_id = jobs.job_id
 INNER JOIN hr.departments AS departments
 ON employees.department_id = departments.department_id
 ORDER BY 1, 2;
-
