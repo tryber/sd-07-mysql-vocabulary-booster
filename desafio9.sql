@@ -7,4 +7,5 @@ FROM
     w3schools.employees AS e ON o.EmployeeId = e.EmployeeId
 GROUP BY o.EmployeeId
 ORDER BY `Total de pedidos`;
+
         
