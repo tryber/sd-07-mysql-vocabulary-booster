@@ -9,7 +9,7 @@
 -- Em caso de empate no nome de contato, ordene os resultados pelo nome da empresa que fez o envio do produto em ordem alfabética.
 -- Se houver empresas com o mesmo nome, ordene os resultados pela data do pedido em ordem crescente.
 SELECT
-C.ContactName as "Nome de Contato",
+C.ContactName as "Nome de contato",
 S.ShipperName as "Empresa que fez o envio",
 O.OrderDate as "Data do pedido"
 FROM w3schools.orders as O
