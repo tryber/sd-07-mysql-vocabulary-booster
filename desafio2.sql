@@ -8,4 +8,4 @@ END AS 'Nivel'
 FROM 
   hr.jobs 
 ORDER BY 
-  'Cargo' ASC;
+  JOB_TITLE ASC;
