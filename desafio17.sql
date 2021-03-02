@@ -6,6 +6,6 @@ CREATE TRIGGER timestamp_orders
     FOR EACH ROW
 BEGIN
     SET NEW.OrderDate = NOW();
-END; $$
+END $$
 
 DELIMITER ;
