@@ -1,4 +1,3 @@
-USE w3schools;
 SELECT productname AS 'Produto',
 price AS 'Preço'
 FROM w3schools.order_details o
