@@ -5,4 +5,5 @@ FROM w3schools.customers AS CUST
 INNER JOIN w3schools.shippers AS SHIP
 INNER JOIN w3schools.orders AS ORD
 ON CUST.CustomerID = ORD.CustomerID AND SHIP.ShipperID = ORD.ShipperID
-ORDER BY CUST.CustomerID ASC, SHIP.ShipperName ASC, ORD.OrderDate ASC;
+WHERE SHIP.ShipperName IN ('Speedy Express', 'United Package')
+ORDER BY CUST.CustomerName ASC, SHIP.ShipperName ASC, ORD.OrderDate ASC;
