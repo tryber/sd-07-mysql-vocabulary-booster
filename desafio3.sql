@@ -5,3 +5,4 @@ FROM
   hr.jobs 
 ORDER BY 
   MAX_SALARY - MIN_SALARY, JOB_TITLE ASC;
+ 
