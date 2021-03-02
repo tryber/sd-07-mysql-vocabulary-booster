@@ -1,5 +1,5 @@
 SELECT JOB_TITLE AS Cargo,
-    ROUND(AVG(e.SALARY), 2) AS 'Média Salarial',
+    ROUND(AVG(e.SALARY), 2) AS 'Média salarial',
     CASE
         WHEN (
             AVG(e.SALARY) >= 2000
@@ -18,5 +18,5 @@ SELECT JOB_TITLE AS Cargo,
 FROM hr.employees AS e
     INNER JOIN hr.jobs AS j ON e.JOB_ID = j.JOB_ID
 GROUP BY JOB_TITLE
-ORDER BY AVG(SALARY),
+ORDER BY `Média Salarial`,
     JOB_TITLE;
