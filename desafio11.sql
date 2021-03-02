@@ -13,7 +13,7 @@ C.Country as "País",
 COUNT(C.CustomerID) as "Número de compatriotas"
 FROM w3schools.customers AS C, w3schools.customers AS C2
 WHERE
-	C.COUNTRY = C2.COUNTRY AND
-    C.CustomerID <> C2.CustomerID
+C.COUNTRY = C2.COUNTRY AND
+C.CustomerID <> C2.CustomerID
 GROUP BY
 C.CustomerID
