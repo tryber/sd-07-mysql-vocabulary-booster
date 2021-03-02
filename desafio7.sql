@@ -6,4 +6,4 @@ FROM hr.job_history jh
 JOIN hr.employees e
 ON jh.employee_id = e.employee_id
 WHERE MONTH(start_date) IN (1, 2, 3)
-ORDER BY `Nome completo`, hire_date;
+ORDER BY `Nome completo`, start_date;
