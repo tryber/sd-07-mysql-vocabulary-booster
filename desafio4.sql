@@ -11,6 +11,3 @@ INNER JOIN hr.jobs AS job
 ON empl.JOB_ID = job.JOB_ID
 GROUP BY job.JOB_TITLE
 ORDER BY `Média salarial`, job.JOB_TITLE;
-
-
-

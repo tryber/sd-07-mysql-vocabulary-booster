@@ -6,5 +6,4 @@ FROM hr.job_history as jobH
 INNER JOIN hr.employees AS emp
 ON jobH.EMPLOYEE_ID = emp.EMPLOYEE_ID
 ORDER BY `Nome Completo`, `Anos Trabalhados`;
-
 -- source: https://www.w3schools.com/sql/func_mysql_date_format.asp
