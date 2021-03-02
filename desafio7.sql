@@ -1,0 +1,1 @@
+SELECT UCASE(CONCAT(e.first_name, ' ', e.last_name)) AS 'Nome completo', IF(MONTH(jh.start_date) IN (1, 2, 3), jh.start_date, NULL) AS 'Data de início', e.salary AS Salário FROM hr.employees AS e RIGHT JOIN hr.job_history AS jh ON e.employee_id = jh.employee_id WHERE IF(MONTH(jh.start_date) IN (1, 2, 3), jh.start_date, NULL) IS NOT NULL ORDER BY `Nome completo`, `Data de início`;
