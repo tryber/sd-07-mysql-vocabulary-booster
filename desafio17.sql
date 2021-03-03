@@ -1,0 +1,8 @@
+USE w3schools;
+DELIMITER $$ CREATE TRIGGER addOrderDate
+AFTER
+INSERT ON orders FOR EACH ROW BEGIN
+UPDATE orders
+SET OrderDate = (DATE(NOW()))
+WHERE OrderID = NEW.OrderID;
+END $$ DELIMITER;
