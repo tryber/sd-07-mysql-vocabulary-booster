@@ -3,5 +3,5 @@ SELECT c1.ContactName AS 'Nome',
   COUNT(c2.Country) - 1 AS 'Número de compatriotas'
 FROM w3schools.customers AS c1
   INNER JOIN w3schools.customers AS c2 ON c1.Country = c2.Country
-GROUP BY `Nome`
+GROUP BY c1.ContactName
 ORDER BY `Nome`;
