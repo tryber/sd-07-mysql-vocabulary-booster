@@ -7,4 +7,4 @@ ON c.CustomerID = o.CustomerID
 INNER JOIN w3schools.shippers AS s
 ON o.ShipperID = s.ShipperID
 HAVING s.ShipperName IN ("Speedy Express", "United Package")
-ORDER BY c.ContactName, s.ShipperName;
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
