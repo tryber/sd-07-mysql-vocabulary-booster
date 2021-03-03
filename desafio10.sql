@@ -8,4 +8,4 @@ INNER JOIN w3schools.order_details AS det
 ON pro.ProductID = det.ProductID
 GROUP BY `Produto`
 HAVING `Média` > 20
-ORDER BY `Média` ASC;
+ORDER BY `Média` ASC, `Produto` ASC;
