@@ -1,8 +1,5 @@
 USE w3schools;
-DELIMITER $$ CREATE TRIGGER addOrderDate
-AFTER
+DELIMITER $$ CREATE TRIGGER addOrderDate BEFORE
 INSERT ON orders FOR EACH ROW BEGIN
-UPDATE orders
-SET OrderDate = (DATE(NOW()))
-WHERE OrderID = NEW.OrderID;
+SET NEW.OrderDate = (DATE(NOW()));
 END $$ DELIMITER;
