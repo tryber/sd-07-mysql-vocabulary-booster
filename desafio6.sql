@@ -6,9 +6,9 @@ SELECT
 FROM
     hr.employees AS t1
         INNER JOIN
-    hr.jobs AS t2 ON t1.JOB_ID = t2.JOB_ID
-        INNER JOIN
-    hr.departments AS t3 ON t1.DEPARTMENT_ID = t3.DEPARTMENT_ID
-        INNER JOIN
     hr.job_history AS t4 ON t1.EMPLOYEE_ID = t4.EMPLOYEE_ID
+        INNER JOIN
+    hr.jobs AS t2 ON t4.JOB_ID = t2.JOB_ID
+        INNER JOIN
+    hr.departments AS t3 ON t4.DEPARTMENT_ID = t3.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC , Cargo ASC;
