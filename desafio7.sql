@@ -1,7 +1,7 @@
 SELECT 
-	UCASE(CONCAT(e.FIRST_NAME, ' ', LAST_NAME)) AS `Nome completo`,
-    IF(MONTH(jh.START_DATE) BETWEEN 1 AND 3, jh.START_DATE, NULL) AS `Data de início`,
-    e.SALARY AS `Salário`
+UCASE(CONCAT(e.FIRST_NAME, ' ', LAST_NAME)) AS `Nome completo`,
+IF(MONTH(jh.START_DATE) BETWEEN 1 AND 3, jh.START_DATE, NULL) AS `Data de início`,
+e.SALARY AS `Salário`
 FROM hr.employees AS e
 INNER JOIN hr.job_history AS jh
 ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID

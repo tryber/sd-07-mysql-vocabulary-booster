@@ -1,7 +1,7 @@
 SELECT
-	cus.ContactName AS `Nome de contato`,
-    IF(shi.ShipperID <> 3, shi.ShipperName, Null) AS `Empresa que fez o envio`,
-    ord.OrderDate AS `Data do pedido`
+cus.ContactName AS `Nome de contato`,
+IF(shi.ShipperID <> 3, shi.ShipperName, Null) AS `Empresa que fez o envio`,
+ord.OrderDate AS `Data do pedido`
 FROM w3schools.orders AS ord
 INNER JOIN w3schools.shippers AS shi
 ON ord.ShipperID = shi.ShipperID
