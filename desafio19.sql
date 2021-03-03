@@ -5,12 +5,12 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE qtdPessoas INT;
 SELECT 
-		COUNT(*)
+COUNT(*)
 FROM
-		hr.employees
+hr.employees
 WHERE
-		MONTH(HIRE_DATE) = mes
-				AND YEAR(HIRE_DATE) = ano INTO qtdPessoas;
+MONTH(HIRE_DATE) = mes
+AND YEAR(HIRE_DATE) = ano INTO qtdPessoas;
 RETURN qtdPessoas;
 END $$
 DELIMITER ;
