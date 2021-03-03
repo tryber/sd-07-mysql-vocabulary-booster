@@ -7,4 +7,4 @@ ON PEDIDO.CustomerID = CLIENTE.CustomerID
 INNER JOIN w3schools.shippers AS TRANSPORTADORA 
 ON TRANSPORTADORA.ShipperID = PEDIDO.ShipperID
 WHERE TRANSPORTADORA.ShipperName IN ('Speedy Express', 'United Package')
-ORDER BY CLIENTE.ContactName, TRANSPORTADORA.ShipperName ASC;
+ORDER BY CLIENTE.ContactName, TRANSPORTADORA.ShipperName, PEDIDO.OrderDate;
