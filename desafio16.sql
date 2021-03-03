@@ -8,7 +8,7 @@ SELECT
 COUNT(*)
 FROM
 job_history AS t1
-	INNER JOIN
+INNER JOIN
 employees AS t2 ON t1.EMPLOYEE_ID = t2.EMPLOYEE_ID
 WHERE
 t2.EMAIL = email INTO quantidadeDeEmpregos;
