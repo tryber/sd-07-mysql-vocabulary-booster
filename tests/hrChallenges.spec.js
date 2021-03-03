@@ -41,7 +41,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.only('Exiba os cargos com seu nível de renumeração associado, com base no salário máximo do cargo', () => {
+  describe('Exiba os cargos com seu nível de renumeração associado, com base no salário máximo do cargo', () => {
     it('Verifica o desafio 2', async () => {
       const challengeQuery = readFileSync('desafio2.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult2');
