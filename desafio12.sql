@@ -6,4 +6,3 @@ e2.phone_number AS "Telefone funcionário 2"
 FROM employees AS e1, employees AS e2
 WHERE e1.job_id = e2.job_id
 ORDER BY 1, 4;
-
