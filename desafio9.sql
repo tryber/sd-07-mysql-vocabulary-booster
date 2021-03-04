@@ -5,5 +5,3 @@ INNER JOIN w3schools.orders AS PEDIDO
 ON PEDIDO.EmployeeID = FUNC.EmployeeID
 GROUP BY PEDIDO.EmployeeID
 ORDER by COUNT(FUNC.EmployeeID);
-
-
