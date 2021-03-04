@@ -1,6 +1,10 @@
-SELECT JOB_TITLE AS 'Cargo', (MAX_SALARY - MIN_SALARY) AS 'Variação Salarial', 
-ROUND(AVG(MIN_SALARY/12),2) AS 'Média mínima mensal', 
-ROUND(AVG(MAX_SALARY/12),2) AS 'Média máxima mensal'
-FROM hr.jobs
-GROUP BY JOB_ID
-ORDER BY (MAX_SALARY - MIN_SALARY), JOB_TITLE;
+SELECT PRODUTO.ProductName AS 'Produto', 
+MIN(O_DETALHE.Quantity) AS 'Mínima',
+MAX(O_DETALHE.Quantity) AS 'Máxima',
+ROUND(AVG(O_DETALHE.Quantity),2) AS 'Média' 
+FROM w3schools.products AS PRODUTO
+INNER JOIN w3schools.order_details AS O_DETALHE
+ON PRODUTO.ProductID = O_DETALHE.ProductID
+GROUP BY PRODUTO.ProductName 
+HAVING ROUND(AVG(O_DETALHE.Quantity), 2) > 20.00
+ORDER BY AVG(O_DETALHE.Quantity), PRODUTO.ProductName;
