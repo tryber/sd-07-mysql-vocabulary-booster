@@ -6,5 +6,5 @@ SELECT
 FROM
     hr.countries AS countries
         INNER JOIN
-    hr.regions AS regions ON regions.REGION_ID = countries.REGION_ID
+    hr.regions AS regions ON countries.REGION_ID = regions.REGION_ID
 ORDER BY `Pais`;
