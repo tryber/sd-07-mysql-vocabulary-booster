@@ -7,4 +7,4 @@ FROM
 WHERE
     details.ProductID = products.ProductID
         AND details.Quantity > 80
-ORDER BY `products`;
+ORDER BY `Produto`;
