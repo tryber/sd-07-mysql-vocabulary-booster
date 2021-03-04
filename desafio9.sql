@@ -5,4 +5,4 @@ FROM w3schools.employees AS EMPLOYEES
 INNER JOIN w3schools.orders AS ORDERS
 ON ORDERS.EmployeeID = EMPLOYEES.EmployeeID
 GROUP BY EMPLOYEES.EmployeeID
-ORDER BY 1;
+ORDER BY 2;
