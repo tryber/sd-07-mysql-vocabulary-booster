@@ -10,5 +10,3 @@ ON p.ProductID = d.ProductID
 GROUP BY p.ProductName
 HAVING AVG(d.Quantity) > 20.00
 ORDER BY AVG(d.Quantity), p.ProductName;
-
-
