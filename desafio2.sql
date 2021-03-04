@@ -8,4 +8,5 @@ SELECT
         ELSE 'não classificado'
     END AS 'Nível'
 FROM
-    hr.jobs;
+    hr.jobs
+    ORDER BY `Cargo` ;

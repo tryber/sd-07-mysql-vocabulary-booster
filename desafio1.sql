@@ -7,4 +7,4 @@ FROM
     hr.countries AS countries
         LEFT JOIN
     hr.regions AS regions ON regions.REGION_ID = countries.REGION_ID
-ORDER BY countries.COUNTRY_NAME DESC;
+ORDER BY countries.COUNTRY_NAME;
