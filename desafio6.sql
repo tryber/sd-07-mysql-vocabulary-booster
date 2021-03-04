@@ -10,4 +10,4 @@ INNER JOIN job_history AS jh
 ON jh.JOB_ID = e.JOB_ID
 INNER JOIN jobs AS j
 ON j.JOB_ID = e.JOB_ID
-ORDER BY 1, 2;
+ORDER BY 1 DESC, 2;
