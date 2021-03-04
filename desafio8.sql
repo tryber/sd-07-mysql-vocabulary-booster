@@ -4,6 +4,5 @@ INNER JOIN w3schools.shippers AS t2
 ON t1.ShipperID = t2.ShipperID
 INNER JOIN w3schools.customers AS t3
 ON t1.CustomerID = t3.CustomerID
-GROUP BY `Nome de Contato`
 HAVING `Empresa que fez o envio` = 'Speedy Express' OR `Empresa que fez o envio` = 'United Package'
 ORDER BY `Nome de Contato`, `Empresa que fez o envio`, `Data do pedido`;
