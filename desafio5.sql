@@ -5,5 +5,5 @@ SELECT
     ROUND(AVG(job.MAX_SALARY), 2) AS 'Média máxima mensal'
 FROM
     hr.jobs AS job
-GROUP BY `Cargo`, `Variação Salarial`
+GROUP BY `Cargo` , `Variação Salarial`
 ORDER BY `Variação Salarial` , `Cargo`;
