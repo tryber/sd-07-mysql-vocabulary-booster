@@ -7,4 +7,5 @@ INNER JOIN w3schools.orders AS o
 ON c.CustomerID = o.CustomerID
 INNER JOIN w3schools.shippers AS s
 ON o.ShipperID = s.ShipperID
+WHERE s.ShipperName IN ('Speedy Express', 'United Package')
 ORDER BY 1, 2, 3;
