@@ -6,5 +6,5 @@ FROM w3schools.products p
 INNER JOIN w3schools.order_details d
 ON p.ProductID = d.ProductID
 GROUP BY (d.ProductID)
-HAVING AVG(d.Quantity) > 20
+HAVING (d.Quantity) > 20
 ORDER BY 4,1;
