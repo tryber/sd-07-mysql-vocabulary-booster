@@ -4,4 +4,5 @@ employees.HIRE_DATE AS 'Data de início do cargo',
 departments.DEPARTMENT_NAME AS 'Departamento'
 FROM hr.employees AS employees
 INNER JOIN hr.jobs AS jobs ON employees.JOB_ID = jobs.JOB_ID
-INNER JOIN hr.departments AS departments ON employees.DEPARTMENTS_ID = departments.DEPARTMENTS_ID;
+INNER JOIN hr.departments AS departments ON hr.employees.DEPARTMENT_ID = hr.departments.DEPARTMENT_ID
+ORDER BY `Nome completo` DESC, jobs.JOB_TITLE ASC;
