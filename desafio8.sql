@@ -4,4 +4,5 @@ OrderDate As 'Data do pedido'
 FROM w3schools.customers AS C
 INNER JOIN w3schools.orders AS O ON C.CustomerID = O.CustomerID
 INNER JOIN w3schools.shippers AS S ON S.ShipperID = O.ShipperID
+WHERE S.ShipperName IN ('Speedy Express', 'United Package')
 ORDER BY CustomerName,ShipperName,OrderDate;
