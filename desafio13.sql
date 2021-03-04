@@ -1,5 +1,5 @@
 SELECT 
-    products.ProductName AS 'products',
+    products.ProductName AS 'Produto',
     products.Price AS 'Preço'
 FROM
     w3schools.products AS products,
