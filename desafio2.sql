@@ -6,4 +6,5 @@ CASE
   WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
   ELSE 'não rolo'
 END AS Nível
-FROM hr.jobs;
+FROM hr.jobs
+ORDER BY JOB_TITLE;
