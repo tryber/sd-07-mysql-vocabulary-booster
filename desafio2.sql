@@ -1,3 +1,4 @@
+USE hr;
 SELECT hr.job_title AS 'Cargo',
 CASE 
   WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
@@ -5,5 +6,4 @@ CASE
   WHEN MAX_SALARY BETWEEN 20001 AND 30000 THEN 'Alto'
   WHEN MAX_SALARY > 30000 THEN 'Altíssimo'
 END AS 'Nível'
-FROM hr.jobs 
-ORDER BY hr.job_title ASC;
+FROM hr.jobs ORDER BY hr.job_title ASC;
