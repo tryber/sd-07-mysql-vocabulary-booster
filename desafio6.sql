@@ -8,4 +8,4 @@ AS `Data de início do cargo`,
 FROM hr.departments
 WHERE hr.departments.DEPARTMENT_ID = hr.employees.DEPARTMENT_ID) AS Departamento
 FROM hr.employees
-ORDER BY `Nome completo`, Cargo;
+ORDER BY `Nome completo` DESC, Cargo;
