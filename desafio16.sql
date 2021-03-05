@@ -7,7 +7,7 @@ BEGIN
     DECLARE quantity INT;
     SELECT COUNT(hj.EMPLOYEE_ID)
     FROM hr.employees AS e
-    INNER JOIN hr.job_history AS jh
+    INNER JOIN hr.job_history AS hj
     ON e.EMPLOYEE_ID = hj.EMPLOYEE_ID
     WHERE e.EMAIL = email INTO quantity;
     RETURN quantity;
