@@ -10,4 +10,4 @@ hr.employees AS `emp1`, hr.employees AS `emp2`
 WHERE
 emp1.JOB_ID = emp2.JOB_ID
 AND emp1.EMPLOYEE_ID <> emp2.EMPLOYEE_ID
-ORDER BY'Nome completo funcionário 1','Nome completo funcionário 2'
+ORDER BY'Nome completo funcionário 1','Nome completo funcionário 2';
