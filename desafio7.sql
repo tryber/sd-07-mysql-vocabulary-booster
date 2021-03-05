@@ -3,4 +3,5 @@ job.START_DATE AS 'Data de início do cargo',
 employees.SALARY AS 'Salário'
 FROM hr.employees AS employees
 INNER JOIN hr.job_history AS job ON job.EMPLOYEE_ID = employees.EMPLOYEE_ID
-ORDER BY `Nome completo`, HIRE_DATE;
+WHERE MONTH(job.START_DATE) BETWEEN 1 AND 3
+ORDER BY `Nome completo`, `Salário`;
