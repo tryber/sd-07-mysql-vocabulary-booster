@@ -3,6 +3,6 @@ t1.salary AS `Salário funcionário 1`, t1.phone_number AS `Telefone funcionári
 CONCAT(t2.first_name, ' ', t2.last_name) AS `Nome completo funcionário 2`, 
 t2.salary AS `Salário funcionário 2`, t2.phone_number AS `Telefone funcionário 2`
 FROM hr.employees as t1, hr.employees as t2
-WHERE t1.employee_id < t2.employee_id
+WHERE t1.employee_id <> t2.employee_id
 AND t1.job_id = t2.job_id
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
