@@ -8,4 +8,5 @@ END AS `Nível`
 FROM hr.employees as t1
 INNER JOIN hr.departments as t2
 ON t1.department_id = t2.department_id
-GROUP BY t2.DEPARTMENT_NAME;
+GROUP BY t2.DEPARTMENT_NAME
+ORDER BY t2.DEPARTMENT_NAME;
