@@ -10,4 +10,6 @@
     WHEN ROUND(((jobs.MAX_SALARY + jobs.MIN_SALARY) / 2), 2) > 10500 THEN "CEO"
   END AS "Senioridade"
   FROM hr.jobs AS jobs
-  ORDER BY jobs.JOB_TITLE;
+  ORDER BY
+    ROUND(((jobs.MAX_SALARY + jobs.MIN_SALARY) / 2), 2) ASC,
+    jobs.JOB_TITLE ASC;
