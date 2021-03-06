@@ -6,4 +6,4 @@ ROUND(TIMESTAMPDIFF(DAY, j.START_DATE, j.END_DATE) / 365, 2) AS 'Anos trabalhado
 FROM hr.employees AS e
 INNER JOIN hr.job_history AS j ON
 e.EMPLOYEE_ID = j.EMPLOYEE_ID
-ORDER BY `Nome completo`, `Anos trabalhados`
+ORDER BY `Nome completo`, `Anos trabalhados`;
