@@ -14,4 +14,4 @@ INTO quantity;
 RETURN quantity;
 END $$
 
-DELIMITER;
+DELIMITER ;
