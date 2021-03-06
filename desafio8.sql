@@ -6,6 +6,8 @@ INNER JOIN w3schools.orders AS orders
 ON customers.CustomerID = orders.CustomerID
 INNER JOIN w3schools.shippers AS shippers
 ON orders.ShipperID = shippers.ShipperID
+WHERE 
+  shippers.ShipperName = "Speedy Express" OR shippers.ShipperName = "United Package"
 ORDER BY customers.ContactName ASC,
   shippers.ShipperName ASC,
   orders.OrderDate ASC
