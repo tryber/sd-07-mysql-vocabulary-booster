@@ -9,7 +9,7 @@ SELECT
 CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS 'Nome completo',
 d.DEPARTMENT_NAME AS 'Departamento',
 j.JOB_TITLE AS 'Cargo'
- FROM hr.job_history AS h
+FROM hr.job_history AS h
 INNER JOIN hr.employees AS e ON
 h.EMPLOYEE_ID = e.EMPLOYEE_ID
 INNER JOIN hr.departments AS d ON
