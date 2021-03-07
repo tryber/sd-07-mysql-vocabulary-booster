@@ -7,4 +7,4 @@ on w3schools.orders.CustomerID = w3schools.customers.CustomerID
 inner join w3schools.shippers
 on w3schools.orders.ShipperID = w3schools.shippers.ShipperID
 where w3schools.shippers.ShipperName in ("Speedy Express", "United Package")
-order by w3schools.customers.CustomerName, w3schools.shippers.ShipperName, w3schools.orders.OrderDate;
+order by 1, w3schools.shippers.ShipperName, w3schools.orders.OrderDate;
