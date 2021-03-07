@@ -7,4 +7,4 @@ CASE
 END AS "Nível"
 
 FROM hr.jobs
-order by JOB_TITLE
+order by JOB_TITLE;
