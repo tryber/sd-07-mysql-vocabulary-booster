@@ -7,4 +7,3 @@ WHERE c.Country = cu.Country
 AND c.ContactName <> cu.ContactName
 GROUP BY c.ContactName,c.Country 
 ORDER BY c.ContactName ASC;
-

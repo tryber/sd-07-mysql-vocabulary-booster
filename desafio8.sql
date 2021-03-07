@@ -6,4 +6,3 @@ FROM w3schools.customers AS c
 INNER JOIN w3schools.orders AS o ON c.CustomerID = o.CustomerID
 INNER JOIN w3schools.shippers AS s ON o.CustomerID = s.ShipperID
 ORDER BY c.ContactName ASC, s.ShipperName ASC, o.OrderDate ASC;
-
