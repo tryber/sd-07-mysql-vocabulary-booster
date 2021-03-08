@@ -8,7 +8,7 @@ left join
 hr.departments d on d.DEPARTMENT_ID = e.DEPARTMENT_ID
 left join
 hr.jobs j on j.JOB_ID = e.JOB_ID
-left join hr.job_history jh on jh.EMPLOYEE_ID = e.EMPLOYEE_ID
+inner join hr.job_history jh on jh.EMPLOYEE_ID = e.EMPLOYEE_ID
 order by
 1 DESC,
 2 ASC;
