@@ -10,5 +10,6 @@ hr.departments d on d.DEPARTMENT_ID = e.DEPARTMENT_ID
 left join
 hr.jobs j on j.JOB_ID = e.JOB_ID
 order by
-1 DESC,
-4 ASC;
+e.FIRST_NAME DESC,
+e.LAST_NAME DESC,
+e.DEPARTMENT_ID ASC;
