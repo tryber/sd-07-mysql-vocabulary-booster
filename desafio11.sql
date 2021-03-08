@@ -1,7 +1,9 @@
-SELECT ContactName AS 'Nome',
-Country AS 'País', 
-COUNT(CustomerID) - 1 AS 'Número de compatriotas'
-FROM w3schools.customers
-GROUP BY CustomerID
-having COUNT(CustomerID) - 1 > 0
-ORDER BY ContactName;
+SELECT customers.ContactName AS Nome,
+customers.Country AS País, 
+COUNT(customers.Country) - 1 AS 'Número de compatriotas'
+FROM w3schools.customers AS customers,
+w3schools.customers AS customers2
+WHERE customers.Country = customers2.Country
+GROUP BY customers.CustomerID
+HAVING COUNT(customers.Country) - 1 > 0
+ORDER BY customers.ContactName;
