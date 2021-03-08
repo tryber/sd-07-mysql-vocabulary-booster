@@ -1,8 +1,8 @@
 DELIMITER $$
 
 CREATE PROCEDURE buscar_media_por_cargo(
-	IN job VARCHAR(50),
-    OUT media DECIMAL(7,2)
+IN job VARCHAR(50),
+OUT media DECIMAL(7,2)
 )
 BEGIN
 SELECT
