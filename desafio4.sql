@@ -10,4 +10,4 @@ END AS Senioridade
 FROM hr.jobs AS j
 INNER JOIN hr.employees AS e
 ON j.JOB_ID = e.JOB_ID
-ORDER BY ROUND((MIN_SALARY + MAX_SALARY) / 2, 2), j.JOB_TITLE;
+ORDER BY ROUND(AVG(e.SALARY), 2), j.JOB_TITLE;
