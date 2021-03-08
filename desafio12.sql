@@ -1,0 +1,12 @@
+SELECT
+CONCAT(EMPLOYEE1.FIRST_NAME, ' ', EMPLOYEE1.LAST_NAME) AS "Nome completo funcionário 1",
+EMPLOYEE1.SALARY AS "Salário funcionário 1",
+EMPLOYEE1.PHONE_NUMBER AS "Telefone funcionário 1",
+CONCAT(EMPLOYEE2.FIRST_NAME, ' ', EMPLOYEE2.LAST_NAME) AS "Nome completo funcionário 2",
+EMPLOYEE2.SALARY AS "Salário funcionário 2",
+EMPLOYEE2.PHONE_NUMBER AS "Telefone funcionário 2"
+FROM
+hr.employees AS EMPLOYEE1, hr.employees AS EMPLOYEE2
+WHERE EMPLOYEE1.JOB_ID = EMPLOYEE2.JOB_ID
+AND CONCAT(EMPLOYEE1.FIRST_NAME, ' ', EMPLOYEE1.LAST_NAME) <> CONCAT(EMPLOYEE2.FIRST_NAME, ' ', EMPLOYEE2.LAST_NAME)
+ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`
