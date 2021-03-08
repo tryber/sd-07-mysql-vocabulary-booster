@@ -10,5 +10,3 @@ inner join hr.departments d on d.DEPARTMENT_ID = jh.DEPARTMENT_ID
 order by
 1 DESC,
 2 ASC;
-
-Error Code: 1064. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'jh' at line 1
