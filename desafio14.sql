@@ -1,7 +1,7 @@
-SELECT DISTINCT customers.Country AS "País"
-FROM w3schools.customers AS customer
+SELECT DISTINCT Country AS "País"
+FROM w3schools.customers
 UNION
-SELECT DISTINCT suppliers.Country
-FROM w3schools.suppliers AS supplier
+SELECT DISTINCT Country
+FROM w3schools.suppliers
 ORDER BY "País"
 LIMIT 5;
