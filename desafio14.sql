@@ -1,0 +1,11 @@
+(SELECT
+CUSTOMERS.Country AS "País"
+FROM
+w3schools.customers AS CUSTOMERS)
+UNION
+(SELECT
+SUPPLIERS.Country
+FROM
+w3schools.suppliers AS SUPPLIERS)
+ORDER BY `País`
+LIMIT 5
