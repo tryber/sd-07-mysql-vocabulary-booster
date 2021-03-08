@@ -7,5 +7,5 @@ CASE
 END AS 'Senioridade'
 FROM hr.jobs AS t1
 INNER JOIN hr.employees AS t2 ON t1.JOB_ID = t2.JOB_ID
-GROUP BY t1.JOB_TITLE
+GROUP BY `Cargo`
 ORDER BY AVG(t2.SALARY), t1.JOB_TITLE;
