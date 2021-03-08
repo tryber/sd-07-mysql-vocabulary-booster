@@ -22,3 +22,8 @@ WHERE (
     WHERE ord.ProductID = pro.ProductID
 ) > 20
 ORDER BY `Média`;
+
+-- Duration / Fetch
+-- 0,0072 sec / 0,000026 sec
+
+-- Query cost: 84.95
