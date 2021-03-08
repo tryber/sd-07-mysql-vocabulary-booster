@@ -8,4 +8,7 @@ from hr.employees e
 left join
 hr.departments d on d.DEPARTMENT_ID = e.DEPARTMENT_ID
 left join
-hr.jobs j on j.JOB_ID = e.JOB_ID;
+hr.jobs j on j.JOB_ID = e.JOB_ID
+order by
+1 ASC,
+4 ASC;
