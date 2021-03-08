@@ -9,3 +9,8 @@ ON pro.ProductID = ord.ProductID
 GROUP BY `Produto`
 HAVING `Média` > 20
 ORDER BY `Média` ASC, `Produto` ASC;
+
+-- Duration / Fetch
+-- 0,117 sec / 0,000029 sec
+
+-- Query Cost: 189.25
