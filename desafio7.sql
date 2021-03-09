@@ -1,5 +1,5 @@
 select
-concat(e.first_name, ' ', e.last_name) as 'Nome completo',
+UCASE(concat(e.first_name, ' ', e.last_name)) as 'Nome completo',
 jh.START_DATE as 'Data de início',
 e.SALARY as 'Salário'
 from hr.job_history jh
