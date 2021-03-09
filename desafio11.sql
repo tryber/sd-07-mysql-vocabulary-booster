@@ -6,5 +6,3 @@ from w3schools.customers c
 where
 ((select count(Country) from w3schools.customers where Country = c.Country) - 1) > 0
 order by 1 ASC;
-
-
