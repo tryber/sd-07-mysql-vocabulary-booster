@@ -1,6 +1,6 @@
 select
 p.ProductName as 'Produto',
-p.Price
+p.Price as 'Preço'
 from w3schools.order_details od
 inner join w3schools.products p on p.ProductID = od.ProductID 
 where Quantity > 80
