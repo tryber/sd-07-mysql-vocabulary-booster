@@ -1,4 +1,4 @@
-SELECT UPPER(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS "Nome Completo",
+SELECT UPPER(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS "Nome completo",
 e.SALARY AS "Salário",
 h.START_DATE AS "Data de início"
 FROM hr.employees AS e
