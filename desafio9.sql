@@ -1,10 +1,7 @@
-SELECT customers.ContactName as `Nome de contato`,
-shippers.ShipperName as `Empresa que fez o envio`,
-orders.OrderDate as `Data do pedido`
-FROM w3schools.customers AS customers
-INNER JOIN w3schools.orders AS orders
-ON customers.CustomerID = orders.CustomerID
-JOIN w3schools.shippers AS shippers
-ON orders.ShipperID = shippers.ShipperID
-WHERE shippers.ShipperName = 'Speedy Express' OR shippers.ShipperName = 'United Package' 
-ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
+SELECT CONCAT(e.FirstName, ' ', e.LastName) AS `Nome completo`,
+COUNT(ord.OrderID) AS `Total de pedidos`
+FROM employees AS e
+INNER JOIN orders AS ord
+ON e.EmployeeID = ord.EmployeeID
+GROUP BY ord.EmployeeID
+ORDER BY `Total de pedidos`;
