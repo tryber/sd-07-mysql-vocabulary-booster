@@ -1,4 +1,3 @@
-
 SELECT
 cust1.ContactName AS Nome,
 cust1.Country AS País,
