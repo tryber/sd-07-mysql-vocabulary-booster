@@ -6,8 +6,8 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE jobs_QTT INT;
 select
-	count(*)
-	from hr.employees e
+count(*)
+from hr.employees e
 inner join hr.job_history jh on jh.EMPLOYEE_ID = e.EMPLOYEE_ID
 where e.EMAIL like concat('%', email, '%') into jobs_QQ;
 END $$
