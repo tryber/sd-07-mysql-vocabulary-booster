@@ -8,7 +8,7 @@ select
 count(*)
 from hr.employees e
 inner join hr.job_history jh on jh.EMPLOYEE_ID = e.EMPLOYEE_ID
-where e.EMAIL like concat('%', email, '%') into jobs_QTT;
-RETURN job_QTT;
+where e.EMAIL like concat('%', email, '%') INTO jobs_QTT;
+RETURN jobs_QTT;
 END $$
 DELIMITER ;
