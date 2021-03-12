@@ -7,4 +7,5 @@ WHEN max_salary <= 10000  THEN "Baixo"
   WHEN max_salary BETWEEN 20001 AND 30000 THEN "Alto"
   WHEN max_salary > 30000 THEN "Altíssimo"
 END AS "GranaGranaGrana"
-FROM hr.jobs;
+FROM hr.jobs
+ORDER BY job_title;
