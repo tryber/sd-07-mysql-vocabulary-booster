@@ -1,5 +1,5 @@
 SELECT
-jobs.JOB_TITLE AS Cargo,
+jobs.job_title AS Cargo,
 ROUND(AVG(employees.SALARY), 2) AS Média,
 CASE 
   WHEN ROUND(AVG(employees.SALARY), 2) > 10500 THEN "CEO"
@@ -9,6 +9,6 @@ CASE
 ELSE "Estagiário"
 END AS Senioridade
 FROM hr.employees
-INNER JOIN hr.jobs ON employees.JOB_ID = jobs.JOB_ID
-GROUP BY JOB_TITLE
+INNER JOIN hr.jobs ON employees.job_id = jobs.job_id
+GROUP BY job_title
 ORDER BY ROUND(AVG(SALARY), 2) ASC, Cargo ASC;
