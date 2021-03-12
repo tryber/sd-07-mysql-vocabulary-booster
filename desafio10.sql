@@ -1,4 +1,3 @@
-SELECT * FROM w3schools.products;
 SELECT p.ProductName AS 'Produto',
 MIN(d.Quantity) AS 'Mínima',
 MAX(d.Quantity) AS 'Máxima',
