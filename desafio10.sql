@@ -1,5 +1,5 @@
 SELECT pro.ProductName AS "Produto",
-MIN(ord.Quantity) AS "Mínimo",
+MIN(ord.Quantity) AS "Mínima",
 MAX(ord.Quantity) AS "Máxima",
 ROUND(AVG(ord.Quantity), 2) AS "Média"
 FROM w3schools.products AS pro
