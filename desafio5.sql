@@ -1,7 +1,7 @@
 SELECT
 job_title AS "Cargo",
-(MAX_SALARY - MIN_SALARY) AS "Média Salarial",
-MIN_SALARY AS "Média mínima mensal",
-MAX_SALARY AS "Média máxima mensal"
+(max_salary - min_salary) AS "Média Salarial",
+min_salary AS "Média mínima mensal",
+max_salary AS "Média máxima mensal"
 FROM hr.jobs
-ORDER BY (MAX_SALARY - MIN_SALARY), JOB_TITLE;
+ORDER BY (max_salary - min_salary), job_title;
