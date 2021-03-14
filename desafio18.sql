@@ -1,8 +1,7 @@
-SELECT CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) AS 'Nome completo',
-CONCAT(SUBSTRING(JH.START_DATE, 9, 2), SUBSTRING(JH.START_DATE, 5, 4), SUBSTRING(JH.START_DATE, 1, 4)) AS 'Data de início',
-CONCAT(SUBSTRING(JH.END_DATE, 9, 2), SUBSTRING(JH.END_DATE, 5, 4), SUBSTRING(JH.END_DATE, 1, 4)) AS 'Data de rescisão',
-YEAR(JH.END_DATE) - YEAR(JH.START_DATE) AS 'Anos trabalhados'
-FROM hr.job_history AS JH
-INNER JOIN hr.employees AS E
-ON JH.EMPLOYEE_ID = E.EMPLOYEE_ID
-ORDER BY CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME), YEAR(JH.END_DATE) - YEAR(JH.START_DATE);
+SELECT
+concat(e.first_name, ' ', e.last_name) as 'Nome completo',
+DATE_FORMAT(jh.start_date, '%d/%m/%Y') as 'Data de início', 
+DATE_FORMAT(jh.end_date, '%d/%m/%Y') as 'Data de rescisão', 
+(SELECT round((DATEDIFF(jh.end_date, jh.start_date) /365),2)) as 'Anos trabalhados'
+from hr.job_history jh
+inner join hr.employees e on e.employee_id = jh.employee_id
