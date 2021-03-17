@@ -1,6 +1,3 @@
-select country_name as "País" ,
-if(region_name = "Europe", "incluído", "não incluído") as "Status Inlcusão"
-from hr.countries as hrc
-inner join hr.regions as hrr
-on hrr.region_id = hrc.region_id
-order by `País` asc;
+select country_name as "País" ,if(region_id = 1, "incluído", "não incluído") as "Status Inclusão"
+from hr.countries
+order by `País`;
