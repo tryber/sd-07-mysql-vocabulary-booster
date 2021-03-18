@@ -6,4 +6,4 @@ inner join w3schools.customers as wcustomers
 on wcustomers.CustomerID = worders.CustomerID
 inner join w3schools.shippers as wshippers
 on wshippers.ShipperID = worders.ShipperID
-group by `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
+order by `Nome de contato`, `Empresa que fez o envio`, `Data do pedido` asc;
