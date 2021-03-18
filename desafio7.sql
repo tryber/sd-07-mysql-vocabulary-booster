@@ -1,7 +1,7 @@
 select upper(concat(hre.first_name, " ", hre.last_name)) as "Nome completo",
-hire_date as "Data de início",
+hrjh.start_date as "Data de início",
 hre.salary as "Salário"
 from hr.employees as hre
-inner join hr.departments as hrd
-on hre.department_id = hrd.department_id
+inner join hr.job_history as hrjh
+on hre.employee_id = hrjh.employee_id
 order by `Nome completo`, `Data de início` asc;
