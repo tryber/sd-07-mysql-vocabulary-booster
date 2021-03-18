@@ -1,4 +1,4 @@
-select wcustomers.customerName as "Nome de contato",
+select wcustomers.contactName as "Nome de contato",
 wshippers.shipperName as "Empresa que fez o envio",
 worders.OrderDate as "Data do pedido"
 from w3schools.orders as worders
