@@ -4,7 +4,7 @@ CONCAT(REPEAT('0',2-LENGTH(MONTH(hjh.START_DATE))), MONTH(hjh.START_DATE)), '/',
 CONCAT(REPEAT('0',2-LENGTH(YEAR(hjh.START_DATE))), YEAR(hjh.START_DATE))) AS 'Data de início',
 CONCAT(CONCAT(REPEAT('0',2-LENGTH(DAY(hjh.END_DATE))), DAY(hjh.END_DATE)), '/', 
 CONCAT(REPEAT('0',2-LENGTH(MONTH(hjh.END_DATE))), MONTH(hjh.END_DATE)), '/',
-CONCAT(REPEAT('0',2-LENGTH(YEAR(hjh.END_DATE))), YEAR(hjh.END_DATE))) AS 'Data de recisão',
+CONCAT(REPEAT('0',2-LENGTH(YEAR(hjh.END_DATE))), YEAR(hjh.END_DATE))) AS 'Data de rescisão',
 ROUND(DATEDIFF(hjh.END_DATE, hjh.START_DATE) / 365, 2) AS 'Anos trabalhados'
 FROM hr.employees hemp
 INNER JOIN hr.job_history hjh ON hemp.EMPLOYEE_ID = hjh.EMPLOYEE_ID
