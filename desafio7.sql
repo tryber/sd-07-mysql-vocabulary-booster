@@ -1,5 +1,5 @@
 SELECT
-UCASE(CONCAT(FIRST_NAME, ' ', LAST_NAME)) AS 'NOME COMPLETO',
+UCASE(CONCAT(FIRST_NAME, ' ', LAST_NAME)) AS 'Nome Completo',
 START_DATE AS 'Data de início',
 SALARY AS 'Salário'
 FROM hr.employees emp
