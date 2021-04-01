@@ -1,13 +1,8 @@
-SELECT
-CONCAT(emp.FIRST_NAME, ' ', emp.LAST_NAME) 'Nome Completo',
-jobs.JOB_TITLE 'Cargo',
-j_history.START_DATE 'Data de início do cargo',
-DEPARTMENT_NAME 'Departamento'
-FROM hr.job_history j_history
-LEFT JOIN hr.jobs jobs
-ON j_history.JOB_ID = jobs.JOB_ID
-LEFT JOIN hr.employees emp
-ON j_history.EMPLOYEE_ID = emp.EMPLOYEE_ID
-LEFT JOIN hr.departments dpt
-ON j_history.DEPARTMENT_ID = dpt.DEPARTMENT_ID
-ORDER BY `Nome Completo` DESC, `Cargo` LIMIT 10;
+select upper(concat(hre.first_name, " ", hre.last_name)) as "Nome completo",
+hrjh.start_date as "Data de início",
+hre.salary as "Salário"
+from hr.employees as hre
+inner join hr.job_history as hrjh
+on hre.employee_id = hrjh.employee_id
+having month(`Data de início`) between 1 and 3 
+order by `Nome completo`, `Data de início` asc;
