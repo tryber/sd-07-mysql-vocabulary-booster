@@ -10,4 +10,4 @@ LEFT JOIN hr.jobs job
 ON job.JOB_ID = job_h.JOB_ID
 LEFT JOIN hr.departments dept
 ON dept.DEPARTMENT_ID = job_h.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC, `Data de início do Cargo`;
+ORDER BY `Nome completo` DESC, `Cargo`;
