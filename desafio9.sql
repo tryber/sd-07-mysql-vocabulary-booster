@@ -1,10 +1,10 @@
 SELECT
 CONCAT(emp.FirstName, ' ', emp.LastName) 'Nome completo',
-order_d.Quantity 'Total de pedidos'
+COUNT(*) 'Total de pedidos'
 FROM w3schools.orders
 LEFT JOIN w3schools.employees emp
 ON orders.EmployeeID = emp.EmployeeID
-INNER JOIN w3schools.order_details order_d
-ON order_d.OrderID = orders.OrderID
-GROUP BY orders.EmployeeID
-ORDER BY Quantity;
+INNER JOIN w3schools.customers ctms
+ON ctms.CustomerID = orders.CustomerID
+GROUP BY `Nome Completo`
+ORDER BY `Total de pedidos`;
