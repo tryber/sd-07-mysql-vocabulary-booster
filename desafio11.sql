@@ -1,5 +1,5 @@
 SELECT ctms1.ContactName 'Nome', ctms1.Country 'País', `Número de compatriotas` FROM w3schools.customers ctms1
-LEFT JOIN
+RIGHT JOIN
 (
 SELECT COUNT(*) - 1 'Número de compatriotas', Country FROM w3schools.customers
 GROUP BY Country
