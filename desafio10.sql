@@ -1,6 +1,5 @@
 SELECT
 products.ProductName 'Produto',
-order_d.ProductID,
 MIN(order_d.Quantity) AS 'Mínima',
 MAX(order_d.Quantity) 'Máxima',
 ROUND(AVG(order_d.Quantity), 2) 'Média'
