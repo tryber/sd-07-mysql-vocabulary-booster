@@ -1,10 +1,11 @@
 SELECT
-c.ContactName AS 'Nome de contato',
-orders.OrderDate AS 'Empresa que fez o envio',
-s.ShipperName AS 'Data do pedido'
-FROM w3schools.orders orders
-LEFT JOIN w3schools.shippers s
-ON s.ShipperID = orders.ShipperID
-LEFT JOIN w3schools.customers c
-ON orders.CustomerID = c.CustomerID
+ContactName 'Nome de contato',
+orders.OrderDate 'Data do pedido',
+ShipperName 'Empresa que fez o envio'
+FROM w3schools.customers ctms
+RIGHT JOIN w3schools.orders orders
+ON orders.CustomerID = ctms.customerID
+INNER JOIN w3schools.shippers sps
+ON sps.ShipperID = orders.ShipperID
+WHERE sps.ShipperID IN (1, 2)
 ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
