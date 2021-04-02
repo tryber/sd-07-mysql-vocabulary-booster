@@ -8,4 +8,4 @@ ON orders.CustomerID = ctms.customerID
 INNER JOIN w3schools.shippers sps
 ON sps.ShipperID = orders.ShipperID
 WHERE sps.ShipperID IN (1, 2)
-ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`; --
