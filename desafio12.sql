@@ -15,4 +15,3 @@ FROM hr.employees
 ON emp1.JOB_ID = emp2.JOB_ID
 HAVING `Nome completo funcionário 1` != `Nome completo funcionário 2`
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
-
