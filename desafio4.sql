@@ -1,3 +1,4 @@
+-- rever esse, esta muito complicado
 SELECT 
 jobs.job_title AS Cargo,
 ROUND(AVG(employees.salary), 2) as "Média salarial",
