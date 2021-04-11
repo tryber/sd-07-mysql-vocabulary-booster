@@ -1,0 +1,12 @@
+SELECT J.JOB_TITLE AS Cargo, ROUND(AVG(M.SALARY),2) AS 'Média salarial',
+  CASE
+      WHEN ROUND(AVG(M.SALARY),2) >= '2000' AND ROUND(AVG(M.SALARY),2) <= '5800' THEN 'Júnior'
+      WHEN ROUND(AVG(M.SALARY),2) >= '5801' AND ROUND(AVG(M.SALARY),2) <= '7500' THEN 'Pleno'
+      WHEN ROUND(AVG(M.SALARY),2) >= '7501' AND ROUND(AVG(M.SALARY),2) <= '10500' THEN 'Sênior'
+      WHEN ROUND(AVG(M.SALARY),2) > '10500' THEN 'CEO'
+      END AS "Senioridade"
+      FROM hr.jobs AS J
+      INNER JOIN hr.employees AS M
+      ON J.JOB_ID = M.JOB_ID
+      GROUP BY J.JOB_TITLE
+      ORDER BY ROUND(AVG(M.SALARY),2);
