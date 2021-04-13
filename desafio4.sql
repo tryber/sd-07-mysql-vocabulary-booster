@@ -13,4 +13,4 @@ hr.employees e
 WHERE
 e.JOB_ID = j.JOB_ID
 GROUP BY j.JOB_ID
-ORDER BY 'Média salarial' , Cargo;
+ORDER BY `Média salarial`, Cargo;

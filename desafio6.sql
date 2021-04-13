@@ -9,7 +9,7 @@ hr.employees e,
 hr.jobs j,
 hr.job_history jh
 WHERE
-j.JOB_ID = e.JOB_ID
+j.JOB_ID = jh.JOB_ID
 AND e.EMPLOYEE_ID = jh.EMPLOYEE_ID
-AND jh.DEPARTMENT_ID = d.DEPARTMENT_ID
-ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC , Cargo;
+AND d.DEPARTMENT_ID = jh.DEPARTMENT_ID
+ORDER BY `Nome completo` DESC , Cargo;
