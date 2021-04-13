@@ -1,0 +1,12 @@
+SELECT jobs.JOB_TITLE AS Cargo, 
+	CASE 
+		WHEN MAX(em.SALARY) >= 500 AND MAX(em.SALARY) <= 10000 THEN 'Baixo'
+		WHEN MAX(em.SALARY) >= 10001 AND MAX(em.SALARY) <= 20000 THEN 'Médio'
+    WHEN MAX(em.SALARY) >= 20001 AND MAX(em.SALARY) <= 30000 THEN 'Alto'
+    WHEN MAX(em.SALARY) > 30000 THEN 'Altíssimo'
+	END AS Nível
+FROM hr.employees AS em
+INNER JOIN hr.jobs AS jobs
+ON em.JOB_ID = jobs.JOB_ID
+GROUP BY jobs.JOB_TITLE
+ORDER BY jobs.JOB_TITLE;
