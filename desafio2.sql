@@ -1,4 +1,4 @@
-select job_title as cargo,  
+select job_title as Cargo,  
 case 
 when max_salary between 5000 and 10000 then 'Baixo'
 when max_salary between 10001 and 20000 then 'Médio'
