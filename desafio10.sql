@@ -7,5 +7,4 @@ FROM w3schools.products as p
   on p.ProductID = d.ProductID
 group by p.ProductName
 having `Média` > 20
-order by `Média`, p
-.ProductName;
+order by `Média`, p.ProductName;
