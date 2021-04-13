@@ -4,5 +4,6 @@ o.Quantity
 FROM w3schools.products as p
 Inner join w3schools.order_details as o
 on p.ProductID = o.ProductID
-group by p.ProductName;
--- realmente não entendi group by
+-- realmente não entendi group by, até aqui vai, quando coloca essa linha abaixo não vai mais
+-- group by p.ProductName, parece que era só colocar o where, quando foi que "juntou"?;
+where o.Quantity > 80;
