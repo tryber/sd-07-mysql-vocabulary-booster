@@ -4,13 +4,13 @@ DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(50))
 RETURNS INT READS SQL DATA
 BEGIN
-	declare numberOfJobs INT;
-	select count(jh.EMPLOYEE_ID) into numberOfJobs
-		from hr.employees as e
-		inner join hr.job_history as jh
-		on e.EMPLOYEE_ID = jh.EMPLOYEE_ID
-		where e.EMAIL = email;
-    return numberOfJobs;
+declare numberOfJobs INT;
+select count(jh.EMPLOYEE_ID) into numberOfJobs
+from hr.employees as e
+inner join hr.job_history as jh
+on e.EMPLOYEE_ID = jh.EMPLOYEE_ID
+where e.EMAIL = email;
+return numberOfJobs;
 END $$
 
 DELIMITER ;
