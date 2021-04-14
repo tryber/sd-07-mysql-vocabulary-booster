@@ -2,6 +2,7 @@ const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
 
+jest.setTimeout(150000)
 describe('Desafios iniciais', () => {
   let sequelize;
 
